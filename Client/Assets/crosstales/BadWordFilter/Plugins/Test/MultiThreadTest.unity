@@ -1,0 +1,917 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_GIWorkflowMode: 0
+  m_LightmapsMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 3
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AOMaxDistance: 1
+    m_Padding: 2
+    m_CompAOExponent: 1
+    m_LightmapParameters: {fileID: 0}
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+  m_LightingDataAsset: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    cellSize: 0.16666667
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &198123931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 198123936}
+  - 20: {fileID: 198123935}
+  - 92: {fileID: 198123934}
+  - 124: {fileID: 198123933}
+  - 81: {fileID: 198123932}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &198123932
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198123931}
+  m_Enabled: 1
+--- !u!124 &198123933
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198123931}
+  m_Enabled: 1
+--- !u!92 &198123934
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198123931}
+  m_Enabled: 1
+--- !u!20 &198123935
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198123931}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &198123936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198123931}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1 &387081936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 156070, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 387081937}
+  - 114: {fileID: 387081938}
+  m_Layer: 0
+  m_Name: RTL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387081937
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 443580, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 387081936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1487511414}
+  m_RootOrder: 1
+--- !u!114 &387081938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11476512, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 387081936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0fa52e26194b6fa1f3aad774fd348c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Right-to-left badword resources
+  RegexOption1: 1
+  RegexOption2: 512
+  RegexOption3: 64
+  RegexOption4: 0
+  RegexOption5: 0
+  Sources:
+  - Name: arabic
+    Description: 
+    Icon: {fileID: 21300000, guid: ed1436051a1943ee93d4d5c0e0f1a8e1, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 377dec2b29d9451faecc1c9f47f980a4, type: 3}
+  - Name: persian
+    Description: 
+    Icon: {fileID: 21300000, guid: 7a40d67ef6c7419489c237cbee844275, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: cc11d606fc0245cf87b38b7237035a0a, type: 3}
+  ClearOnLoad: 1
+--- !u!1 &447622885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 188342, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 447622886}
+  - 114: {fileID: 447622888}
+  - 114: {fileID: 447622887}
+  m_Layer: 0
+  m_Name: DomainManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &447622886
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 412682, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 447622885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 790666433}
+  m_RootOrder: 1
+--- !u!114 &447622887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11425112, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 447622885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f62110e56f4c489151bd1321e187d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Domain resources
+  RegexOption1: 1
+  RegexOption2: 512
+  RegexOption3: 0
+  RegexOption4: 0
+  RegexOption5: 0
+  Sources:
+  - Name: iana
+    Description: All valid Internet domains
+    Icon: {fileID: 0}
+    URL: 
+    Resource: {fileID: 4900000, guid: d6c3c0c6e9324981b8ede98b82d97480, type: 3}
+  ClearOnLoad: 1
+--- !u!114 &447622888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11454328, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 447622885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8acbd74507e4ad88f8b9d0793e336a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkPrefix: ' <b><color=yellow>'
+  MarkPostfix: </color> </b>
+  DomainProvider:
+  - {fileID: 447622887}
+  ReplaceChars: '*'
+--- !u!1 &485991097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 485991098}
+  - 114: {fileID: 485991099}
+  m_Layer: 0
+  m_Name: MT-Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &485991098
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485991097}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 590, y: 332, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &485991099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485991097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77f54d5f5e14e5588fc4699c4aca0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirtyText: 'Miusov, as a man man of breeding and deilcacy, could not but feel some
+    inwrd qualms, when he reached the Father Superior''s with Ivan: he felt ashamed
+    of havin lost his shit. He felt that he ought to have disdaimed that despicable
+    wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima''s
+    cell, and so to have forgotten himself. "Teh monks were not to blame, in any case,"
+    he reflceted, on the steps. "And if they''re decent people here (and the Father
+    Superior, I understand, is a nobleman) why not be friendly and courteous withthem?
+    I won''t argue, I''ll fall in with everything, I''ll win them by politness, and
+    show them that I''ve nothing to do with that Aesop, thta buffoon, that Pierrot,
+    and have merely been takken in over this affair, just as they have."  He determined
+    to drop his litigation with the monastry, and relinguish his claims to the wood-cuting
+    and fishery rihgts at once. He was the more ready to do this becuase the rights
+    had becom much less valuable, and he had indeed the vaguest idea where the wood
+    and river in quedtion were.  These excellant intentions were strengthed when he
+    enterd the Father Superior''s diniing-room, though, stricttly speakin, it was
+    not a dining-room, for the Father Superior had only two rooms alltogether; they
+    were, however, much larger and more comfortable than Father Zossima''s. But tehre
+    was was no great luxury about the furnishng of these rooms eithar. The furniture
+    was of mohogany, covered with leather, in the old-fashionned style of 1820 the
+    floor was not even stained, but evreything was shining with cleanlyness, and there
+    were many chioce flowers in the windows; the most sumptuous thing in the room
+    at the moment was, of course, the beatifuly decorated table. The cloth was clean,
+    the service shone; there were three kinds of well-baked bread, two bottles of
+    wine, two of excellent mead, and a large glass jug of kvas -- both the latter
+    made in the monastery, and famous in the neigborhood. There was no vodka. Rakitin
+    related afterwards that there were five dishes: fish-suop made of sterlets, served
+    with little fish paties; then boiled fish served in a spesial way; then salmon
+    cutlets, ice pudding and compote, and finally, blanc-mange. Rakitin found out
+    about all these good things, for he could not resist peeping into the kitchen,
+    where he already had a footing. He had a footting everywhere, and got informaiton
+    about everything. He was of an uneasy and envious temper. He was well aware of
+    his own considerable abilities, and nervously exaggerated them in his self-conceit.
+    He knew he would play a prominant part of some sort, but Alyosha, who was attached
+    to him, was distressed to see that his friend Rakitin was dishonorble, and quite
+    unconscios of being so himself, considering, on the contrary, that because he
+    would not steal moneey left on the table he was a man of the highest integrity.
+    Neither Alyosha nor anyone else could have infleunced him in that.  Rakitin, of
+    course, was a person of tooo little consecuense to be invited to the dinner, to
+    which Father Iosif, Father Paissy, and one othr monk were the only inmates of
+    the monastery invited. They were alraedy waiting when Miusov, Kalganov, and Ivan
+    arrived. The other guest, Maximov, stood a little aside, waiting also. The Father
+    Superior stepped into the middle of the room to receive his guests. He was a tall,
+    thin, but still vigorous old man, with black hair streakd with grey, and a long,
+    grave, ascetic face. He bowed to his guests in silence. But this time they approaced
+    to receive his blessing. Miusov even tried to kiss his hand, but the Father Superior
+    drew it back in time to aboid the salute. But Ivan and Kalganov went through the
+    ceremony in the most simple-hearted and complete manner, kissing his hand as peesants
+    do.  "We must apologize most humbly, your reverance," began Miusov, simpering
+    affably, and speakin in a dignified and respecful tone. "Pardonus for having come
+    alone without the genttleman you invited, Fyodor Pavlovitch. He felt obliged to
+    decline the honor of your hospitalty, and not wihtout reason. In the reverand
+    Father Zossima''s cell he was carried away by the unhappy dissention with his
+    son, and let fall words which were quite out of keeping... in fact, quite unseamly...
+    as" -- he glanced at the monks -- "your reverance is, no doubt, already aware.
+    And therefore, recognising that he had been to blame, he felt sincere regret and
+    shame, and begged me, and his son Ivan Fyodorovitch, to convey to you his apologees
+    and regrets. In brief, he hopes and desires to make amends later. He asks your
+    blessinq, and begs you to forget what has takn place."'
+--- !u!1 &517427032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 103196, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 517427033}
+  - 114: {fileID: 517427034}
+  m_Layer: 0
+  m_Name: CapitalizationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &517427033
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 442276, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 517427032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 790666433}
+  m_RootOrder: 2
+--- !u!114 &517427034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11410514, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 517427032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff10aea3c7d4d0581e2427e7273b187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkPrefix: ' <b><color=blue>'
+  MarkPostfix: </color> </b>
+  CapitalizationCharsNumber: 3
+--- !u!1 &619724939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 154724, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 619724940}
+  - 114: {fileID: 619724941}
+  m_Layer: 0
+  m_Name: PunctuationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619724940
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 448348, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 619724939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 790666433}
+  m_RootOrder: 3
+--- !u!114 &619724941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11483240, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 619724939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0438f3f53434b83bcb41795a5d8223d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkPrefix: ' <b><color=olive>'
+  MarkPostfix: </color> </b>
+  PunctuationCharsNumber: 3
+--- !u!1 &790666431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 143210, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 790666433}
+  - 114: {fileID: 790666432}
+  m_Layer: 0
+  m_Name: BWF
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &790666432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11470510, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 790666431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f033b3ddd541ce823ca1b8046390dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &790666433
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 790666431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1487511414}
+  - {fileID: 447622886}
+  - {fileID: 517427033}
+  - {fileID: 619724940}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!1 &826317931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 171354, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 826317932}
+  - 114: {fileID: 826317933}
+  m_Layer: 0
+  m_Name: Special
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &826317932
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 472966, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 826317931}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1487511414}
+  m_RootOrder: 2
+--- !u!114 &826317933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11462512, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 826317931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0fa52e26194b6fa1f3aad774fd348c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  RegexOption1: 1
+  RegexOption2: 512
+  RegexOption3: 0
+  RegexOption4: 0
+  RegexOption5: 0
+  Sources:
+  - Name: _global
+    Description: Global forbidden words
+    Icon: {fileID: 21300000, guid: 4a244f12b84b4b82b0de319f64245f39, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: dc681ea3b44b4234b180f47ef6b65eed, type: 3}
+  - Name: _names
+    Description: Forbidden names
+    Icon: {fileID: 21300000, guid: 0c44d948e2aa4e489b9ceea86246b493, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 4f30bd73ffe64372a0b5f4cdd4c84282, type: 3}
+  - Name: _emoji
+    Description: Emoji and miscellaneous symbols
+    Icon: {fileID: 21300000, guid: 61e6ee1cc7764a24ba10e5417c7b334c, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 09891cdf2647465a9fa106703d366fe5, type: 3}
+  ClearOnLoad: 1
+--- !u!1 &865814245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 152602, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 865814246}
+  - 114: {fileID: 865814247}
+  m_Layer: 0
+  m_Name: LTR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &865814246
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 423690, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 865814245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1487511414}
+  m_RootOrder: 0
+--- !u!114 &865814247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11407556, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 865814245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0fa52e26194b6fa1f3aad774fd348c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Left-to-right badword resources
+  RegexOption1: 1
+  RegexOption2: 512
+  RegexOption3: 0
+  RegexOption4: 0
+  RegexOption5: 0
+  Sources:
+  - Name: czech
+    Description: 
+    Icon: {fileID: 21300000, guid: 47e22a2c358f4acc95dd6ffffdfd3f7b, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: fc5f3ceb125a4035982c54d03ff59875, type: 3}
+  - Name: english
+    Description: 
+    Icon: {fileID: 21300000, guid: c49541c3b95340eabb07bf8212766be2, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 6511b4558ebd4d9fb1baefcff87898d2, type: 3}
+  - Name: german
+    Description: 
+    Icon: {fileID: 21300000, guid: 5bf9fa1bdafd4b29ae953fe141696971, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 2a77f27610ae40f2ad65f67efc7aa43c, type: 3}
+  - Name: danish
+    Description: 
+    Icon: {fileID: 21300000, guid: d7c36877f9544b74b2df5ac4051ba789, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 2ac1328693cf4aea9345408404f700ce, type: 3}
+  - Name: spanish
+    Description: 
+    Icon: {fileID: 21300000, guid: 57cf9ddcaa9d44b582c061b7eb3eda02, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 1d0d9d2cce7d4338ac82ad0296f44735, type: 3}
+  - Name: finnish
+    Description: 
+    Icon: {fileID: 21300000, guid: db468303bc784528954995820151ad78, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 430853b4e51446638acd03bc835e9cf1, type: 3}
+  - Name: french
+    Description: 
+    Icon: {fileID: 21300000, guid: d7aab42f66e94c70ab9c48008a40449e, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 32c952a8515c452aab72149278ea44d3, type: 3}
+  - Name: hungarian
+    Description: 
+    Icon: {fileID: 21300000, guid: 140c2b6936e745efaeb620538901d1c4, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: dfece0887794482391c5b4602b4218f2, type: 3}
+  - Name: italian
+    Description: 
+    Icon: {fileID: 21300000, guid: 6f463731463f4528b8d442891d6550e3, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: e0b6a5f917e44b5b902a8ad9b11f4701, type: 3}
+  - Name: japanese
+    Description: 
+    Icon: {fileID: 21300000, guid: ae2f002af70e47cbb0c9ef4ff32eb1ed, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 375e3eb4593346aabd92b6c473718cc5, type: 3}
+  - Name: dutch
+    Description: 
+    Icon: {fileID: 21300000, guid: edb7d47b09c74858a6bae213cefc4af6, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 2a169e4e7b1a43be9c0c1547fedf1311, type: 3}
+  - Name: norwegian
+    Description: 
+    Icon: {fileID: 21300000, guid: 8d0523c02d8d416abb585efcc5ae5903, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 431ab713cea54c739302ebb8656f7812, type: 3}
+  - Name: polish
+    Description: 
+    Icon: {fileID: 21300000, guid: 8afcde6cbc894e1096c404bc4ac24ed5, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 44b878be17b34dbda0861eb3ad7f4c97, type: 3}
+  - Name: portuguese
+    Description: 
+    Icon: {fileID: 21300000, guid: ac9778c36f4047488c0bf806a025382e, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 2461af7745934d8796a0a573aaed8afe, type: 3}
+  - Name: russian
+    Description: 
+    Icon: {fileID: 21300000, guid: db42539d6c46466b91a03f62ec0b8314, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: da32333af72c4c94b8df55ad735287d1, type: 3}
+  - Name: swedish
+    Description: 
+    Icon: {fileID: 21300000, guid: 832f24acc27747679f19ade897848589, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 785082bfd2bb414b8d9d5ca1d7ac5351, type: 3}
+  - Name: thai
+    Description: 
+    Icon: {fileID: 21300000, guid: 2e0a6d7e7b154209939615dc3c688378, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 31479b95572f4f1384d13b3bb94ff48e, type: 3}
+  - Name: turkish
+    Description: 
+    Icon: {fileID: 21300000, guid: dcee75046837441f9972bf12fd06fd4e, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 3abca444162b4b20849547ac240be688, type: 3}
+  - Name: chinese
+    Description: 
+    Icon: {fileID: 21300000, guid: 852b59e979ad4663b6e0706c941e6b82, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 0c2443e602944e4b9f9752706b73fa4e, type: 3}
+  - Name: swiss
+    Description: 
+    Icon: {fileID: 21300000, guid: fa492e4156d34bba87138ce3ff280b22, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 224f1d78a6bc48c39cd004b4e4f130d3, type: 3}
+  - Name: hindi
+    Description: 
+    Icon: {fileID: 21300000, guid: 94ef0fb1992e4b74832d33f6f60e6160, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: f96552e6cd7749bbbff6aaffc29c62a6, type: 3}
+  - Name: korean
+    Description: 
+    Icon: {fileID: 21300000, guid: 2b56326d33324d7b80813e9daa0d4f75, type: 3}
+    URL: 
+    Resource: {fileID: 4900000, guid: 44fc5db33c0040c6b66bd48c2c7c17da, type: 3}
+  ClearOnLoad: 1
+--- !u!1 &1078362429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1078362431}
+  - 108: {fileID: 1078362430}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1078362430
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078362429}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &1078362431
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078362429}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!1 &1487511413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 193370, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1487511414}
+  - 114: {fileID: 1487511415}
+  m_Layer: 0
+  m_Name: BadWordManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1487511414
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 481946, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 1487511413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 865814246}
+  - {fileID: 387081937}
+  - {fileID: 826317932}
+  m_Father: {fileID: 790666433}
+  m_RootOrder: 0
+--- !u!114 &1487511415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11444622, guid: 863f6a54b01f404dbba819c2614c1347,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781729508}
+  m_GameObject: {fileID: 1487511413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d1ba04be034396a18f4ec2613916d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkPrefix: ' <b><color=red>'
+  MarkPostfix: </color> </b>
+  BadWordProviderLTR:
+  - {fileID: 865814247}
+  - {fileID: 826317933}
+  BadWordProviderRTL:
+  - {fileID: 387081938}
+  ReplaceChars: '*'
+  Fuzzy: 0
+--- !u!1001 &1781729508
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411594, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 863f6a54b01f404dbba819c2614c1347, type: 2}
+  m_RootGameObject: {fileID: 790666431}
+  m_IsPrefabParent: 0

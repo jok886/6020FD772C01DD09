@@ -1,0 +1,343 @@
+# English
+# Last updated: 10.07.2017
+abortion#
+ask(-| )*hole#askhole
+\b(?!\bars\b)(fat|jack|jerk|lame|lard)?(-)*((a(s|r){2,}(es|e)?))+(-)*(bag\w*|bang\w*|bite\w*|clown\w*|crack\w*|crap\w*|face\w*|goblin\w*|hat\w*|head\w*|ho\w*|jack\w*|lick\w*|lol\w*|monk\w*|mu\w*|pirate\w*|hit\w*|wad\w*|wipe\w*)?\b#ass(es)
+ax(-| )*wound#
+\b\w*baby(-| )*(batt|juice|gag|gravy|kick|lick|sack|suck|bag){1}\w*\b#
+balls#
+bam(-| )*pot#
+\b\w*bastard\w*\b#
+\bbbw\b#
+beaner#
+\b\w*bea?stial\w*\b#beastial
+bellend#http://www.urbandictionary.com/define.php?term=bellend
+\bbewb\b#
+birdlock#
+\b\w*bi[a]*tch\w*\b#bitch
+blow(-| )*job#
+blumpkin#
+bog(-| )*off#
+boiolas#
+bollo[ckx]k?#bollok
+bondage#
+boner#
+\b\w*b[o]{2,}b\w*\b#boob
+buggery?#
+\bbum\b#
+bung(-| )*hole#
+busty#
+\b\w*butt(-)*(pirate\w*|sex\w*|cheek\w*|hole\w*|lug\w*|much\w*|plug\w*)?\b#
+camel(-| )*toe#
+\bcarpet(-| )*munch\w*\b#
+\bcawk\b#
+chin(c|k)#chinc#http://www.urbandictionary.com/define.php?term=chink
+choad#
+chode#
+\bcipa\b#
+circle(-| )*jerk
+\b\w*clit\w*\b#clit
+\bcnut\b#
+\b\w*(c|k)[o]+[c]*k\w*\b#cock
+(c|k|g)o{2,}ch(ie|y)?#cooch
+c[o]{2,}n#coon
+c[o]{2,}ter#
+corn(-| )*hole#
+\bcox\b#
+cracker#
+\bcrap\w*\b#crap
+cream(-| )*pie#
+cretin#
+\b[kc][u]+m\w*\b#cum
+\b\w*[kc]un(n)?il(l)?ing\w*\b#cunniling
+cunnie?#
+\b(?!\bscunthorpe\b)\w*[kc][u]+nt\w*\b#cunt
+\bdago\b#
+dam[mn]#
+\bdang\b#
+darkie?#
+\bdarn\b#
+deep(-| )*throat#
+deggo#
+deuced#
+\bdi[c]*k\w*\b#dick
+\bdike\b#
+\bdink\b#
+dirsa#
+dogging?#
+dolcett#
+dommes#
+\bdong\b#
+d[o]{2,}kie#
+d[o]{2,}sh#
+double(-| )*dong#
+double(-| )*penetration#
+\b\w*douche\w*\b#
+dry(-| )*hump#
+\bduche\b#
+\bdum(b)?\w*\b#
+dunce#
+\bdvda\b#
+\bdyke\b#
+ecchi#
+\beff\b#
+\b\w*eja[ck]ulat\w*\b#
+erotic#
+erotism#
+escort#
+eunuch#
+facial#
+\bfag(g)?\w*\b#fag(g)
+\bfa[n]{2,}[y|ie]\w*\b#fanny
+fecal#
+\bfelch\w*\b#felch
+fellate#
+feltch#
+femdom#
+figging#
+fingerbang#
+fingering#
+fisting#
+flamer#
+flange#
+f[o]{2,}tjob#
+foreskin#
+frotting#
+fruitcake#
+\b\w*(ph|f)[0uoae]+[c|k]*[u]*k\w*\b#fuck
+\bfuct\b#
+fudge(-| )*(pack\w*)?#
+futanari#
+\bfux\b#
+\bg(-| )*spot#
+\b\w*gang(-| )*bang\w*\b#
+\bgay\w*\b#gay
+\b\w*genital\w*\b#genital
+\bgino\b#
+\bgitface\b#http://www.urbandictionary.com/define.php?term=Gitface
+glory(-| )*hole#
+\b\w*god(-| )*dam\w*\b#
+\b\w*godam\w*\b#
+go[k]{2,}un#
+g[o]{2,}(-| )*girl(s)?#
+g[o]{2,}k#gook
+\bgringo\b#
+grope#
+group(-| )*sex#
+\bguido\b#
+\bguro\b#
+\bgypo\b#
+hand(-| )*job#
+hard(-| )*core#
+hardn#
+\bheeb\b#
+\bhell\b#
+heshe#
+\bho\b#
+\bhoar\b#
+\bhoe\b#
+honkey#
+h[o]{2,}ker#
+\bhore\b#
+horniest#
+horny#
+hot(-| )*sex#
+\bhump\b#
+incest#
+j[o]{2,}#Jew
+jack(-| )*off#
+jagoff#
+\bjap\b#
+jerk(-| )*(off)?#
+jewbag#
+jig(g)?abo+#jiggaboo
+\b\w*ji[sz]+\w*\b#
+\bjugg\b#
+junglebunny#
+kaffir#
+\bkawk\b#
+\bkike\b#
+\bkill\w*\b#
+kinbaku#
+kinkster#
+\bkinky\b#
+\bknob\w*\b#
+kraut#
+\bkyke\b#
+\blabia\b#
+lemon(-| )*party#
+lesbian#
+lesbo#
+lezzie#
+lolita#
+\blovemak\w*\b#
+mo(-)?fo#
+masochist#
+\b\w*mast(u|e)r(-)?bat\w*\b#
+mcfagget#
+\bmick\b#
+minge#
+molest#
+moron#
+\bmuff\b#
+\b\w*muff(-| )*div\w*\b
+mufugly#
+munging#
+\b\w*murder\w*\b#
+nambla#
+nawashi#
+\b\w*n[ie]+g+ro\w*\b#negro
+nig(-| )*nog#
+niglet#
+nipple#
+\bn[o]{2,}b(s)*\b#noob
+nonce#
+numbnut#
+nutack#
+nutsack#
+nutter#
+omorashi#
+orgasim#
+orgasm#
+orgy#
+\bp(ae|e)do\w*\b#paedo
+\bpaki\b#
+pan[o]{2,}ch#
+panties#
+panty#
+pawn#
+pecker#
+peckerhead#
+pegging#
+phone(-| )*sex#
+\bphuq\b#
+\bpig\b#
+pimp#
+pimpis#
+\bpiss\w*\b#
+playboy#
+pleasure(-| )*chest#
+pole(-| )*smoker#
+pollock#
+ponyplay#
+p[o]{2,}f#poof
+\bp[o]{2,}n\w*\b#poon
+p[o]{2,}p#poop
+porch(-| )*monkey#
+pr[i|1]ck#
+prostitute#
+\bpthc\b#
+\bpube\b#
+\bpunan\w*\b#
+punta#
+pusse#
+\b\w*pu[s]{2,}[iy]+\w*\b#pussy
+\bputo\b#
+queaf#
+queef#
+\bqueer\w*\b#
+\bquim\b#
+rack(-| )*off#
+raghead#
+raging(-| )*boner#
+\brap[ei]+\w*\b#
+rect(al|um)#
+renob#
+\br[ie]+tard\w*\b#
+rimjaw#
+rim(-| )*job#
+rimming#
+rosy(-| )*palm#
+ruski#
+rusty(-| )*trombone#
+s_h_i_t#
+s.o.b.#
+sadis(m|t)#
+santorum#
+\bscat\b#
+schlong#
+scissoring#
+screw#
+screwing#
+scroat#
+scrote#
+scrotum#
+scrubber#
+scumbag#
+sec(h|k)s#
+semen#
+\bshagg\w*\b#
+shaved(-| )*beaver#
+shemale#
+shibari#
+\b\w*shit\w*\b#shit
+shlong#http://www.urbandictionary.com/define.php?term=shlong
+\bshota\b#
+shrimping#
+\bshum\b#
+skank[y]*#
+skeet#
+\bslag\w*\b#
+slanteye#
+\b\w*slut\w*\b#slut
+\bsmeg\b#
+\bsmut\b#
+snatch#
+\b\w*snowball\w*\b#
+\bsodom\w*\b#
+\bspac\b#
+spastic#
+\bspaz\b#
+sperg#
+sperm#
+\bspic\b#
+spick#
+spl[o]{2,}ge#
+\bs[o]{2,}\b#
+sp[o]{2,}ge#
+sp[o]{2,}k#
+spunk#
+\b\w*squirt\w*\b#
+strap(-| )*on#
+strappado#
+\bsuck\w*\b#
+swinger#
+taint#
+\btard\b#
+\btart\b#
+\btea(-| )*bag\w*\b#
+\bteez\b#
+terrorist#
+\btestic\w*\b#testicle
+(three|3){1}(-| )*some#
+throating#
+\bt[ie]t(s)?\b#tit
+\bt[ie][t]+{2,}\w*\b#titt
+\btitwank\w*\b
+topless#
+tosser#
+towelhead#
+tranny#
+tribadism#
+tub(-| )*girl#
+\bturd\b#
+tushy#
+\btwat\w*\b#twat
+twink(ie|y)?#
+\btwunt\w*\b#
+\bundress\w*\b#
+upskirt#
+urophilia#
+\bvag\b#
+vaginal#
+\bwang\b#
+\bwank\w*\b#wank
+white(-| )*power#
+\b\w*who(a)?r\w*\b#whor
+\bwog\b#
+\bwop\b#
+\b\w*x+[ -]rat\w*\b#
+yaoi#
+\byid\b#
+yiffy#
+zoophilia#

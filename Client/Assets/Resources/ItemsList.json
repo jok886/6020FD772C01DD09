@@ -1,0 +1,321 @@
+{
+    "ItemList": [
+        {
+            "Map": "Military",
+            "SchemeItem": {
+                "ModelNameList": [
+                    {
+					    "FileName":"palm_0",
+                        "Name": "椰子树",
+                        "Path": "SceneObjs/palm_0"
+                    },
+                    {
+					    "FileName":"Roadblock_1",
+                        "Name": "路障",
+                        "Path": "SceneObjs/Roadblock_1"
+                    },
+                    {
+					    "FileName":"spool_1",
+                        "Name": "木墩",
+                        "Path": "SceneObjs/spool_1"
+                    },
+                    {
+					    "FileName":"tank_0",
+                        "Name": "坦克",
+                        "Path": "SceneObjs/tank_0"
+                    },
+                    {
+					    "FileName":"target_2",
+                        "Name": "靶子",
+                        "Path": "SceneObjs/target_2"
+                    },
+                    {
+					    "FileName":"trie_1",
+                        "Name": "轮胎",
+                        "Path": "SceneObjs/trie_1"
+                    }
+                ]
+            }
+        },
+        {
+            "Map": "Office",
+            "SchemeItem": {
+                "ModelNameList": [
+                    {
+					    "FileName":"AirCondition00_0",
+                        "Name": "空调",
+                        "Path": "SceneObjs/AirCondition00_0"
+                    },
+                    {
+					    "FileName":"Board00_0",
+                        "Name": "黑板",
+                        "Path": "SceneObjs/Board00_0"
+                    },
+                    {
+					    "FileName":"Bottle00_1",
+                        "Name": "水桶",
+                        "Path": "SceneObjs/Bottle00_1"
+                    },
+                    {
+					    "FileName":"Box00_2",
+                        "Name": "纸箱",
+                        "Path": "SceneObjs/Box00_2"
+                    },
+                    {
+					    "FileName":"Cabinet00_1",
+                        "Name": "柜子",
+                        "Path": "SceneObjs/Cabinet00_1"
+                    },
+                    {
+					    "FileName":"Chair00_0",
+                        "Name": "沙发",
+                        "Path": "SceneObjs/Chair00_0"
+                    },
+                    {
+					    "FileName":"Chair01_1",
+                        "Name": "椅子",
+                        "Path": "SceneObjs/Chair01_1"
+                    },
+                    {
+					    "FileName":"Chair02_1",
+                        "Name": "椅子",
+                        "Path": "SceneObjs/Chair02_1"
+                    },
+                    {
+					    "FileName":"Chair03_1",
+                        "Name": "椅子",
+                        "Path": "SceneObjs/Chair03_1"
+                    },
+                    {
+					    "FileName":"Flower00_2",
+                        "Name": "盆栽",
+                        "Path": "SceneObjs/Flower00_2"
+                    },
+                    {
+					    "FileName":"Flower01_1",
+                        "Name": "盆栽",
+                        "Path": "SceneObjs/Flower01_1"
+                    },
+                    {
+					    "FileName":"Furniture03_0",
+                        "Name": "书柜",
+                        "Path": "SceneObjs/Furniture03_0"
+                    },
+                    {
+					    "FileName":"Supplies00_2",
+                        "Name": "打印机",
+                        "Path": "SceneObjs/Supplies00_2"
+                    },
+                    {
+					    "FileName":"Trashcan00_2",
+                        "Name": "垃圾桶",
+                        "Path": "SceneObjs/Trashcan00_2"
+                    }
+                ]
+            }
+        },
+        {
+            "Map": "Port",
+            "SchemeItem": {
+                "ModelNameList": [
+                    {
+					    "FileName":"barrel01_1",
+                        "Name": "油桶",
+                        "Path": "SceneObjs/barrel01_1"
+                    },
+                    {
+					    "FileName":"fueltanksmall_0",
+                        "Name": "油罐",
+                        "Path": "SceneObjs/fueltanksmall_0"
+                    },
+                    {
+					    "FileName":"Roadblock_1",
+                        "Name": "路障",
+                        "Path": "SceneObjs/Roadblock_1"
+                    },
+                    {
+					    "FileName":"rockgrey01_2",
+                        "Name": "石头",
+                        "Path": "SceneObjs/rockgrey01_2"
+                    },
+                    {
+					    "FileName":"spool_1",
+                        "Name": "木墩",
+                        "Path": "SceneObjs/spool_1"
+                    },
+                    {
+					    "FileName":"trie_1",
+                        "Name": "轮胎",
+                        "Path": "SceneObjs/trie_1"
+                    },
+					{
+					    "FileName":"Anchor001_1",
+                        "Name": "锚",
+                        "Path": "SceneObjs/Anchor001_1"
+                    },
+					{
+					    "FileName":"DangerCup_2",
+                        "Name": "交通锥",
+                        "Path": "SceneObjs/DangerCup_2"
+                    },
+					{
+					    "FileName":"roadblock001_1",
+                        "Name": "大路障",
+                        "Path": "SceneObjs/roadblock001_1"
+                    },
+					{
+					    "FileName":"StopSign_1",
+                        "Name": "警示牌",
+                        "Path": "SceneObjs/StopSign_1"
+                    },
+					{
+					    "FileName":"WoodenBox001_1",
+                        "Name": "木箱",
+                        "Path": "SceneObjs/WoodenBox001_1"
+                    }
+                ]
+            }
+        },
+		{
+            "Map": "ClassRoom",
+            "SchemeItem": {
+                "ModelNameList": [
+                    {
+					    "FileName":"Desk_0",
+                        "Name": "课桌",
+                        "Path": "SceneObjs/Desk_0"
+                    },
+                    {
+					    "FileName":"SelfStudyDesk_0",
+                        "Name": "4人座椅",
+                        "Path": "SceneObjs/SelfStudyDesk_0"
+                    },
+                    {
+					    "FileName":"Dustbin_1",
+                        "Name": "垃圾桶",
+                        "Path": "SceneObjs/Dustbin_1"
+                    },
+                    {
+					    "FileName":"Flower_2",
+                        "Name": "盆栽",
+                        "Path": "SceneObjs/Flower_2"
+                    },
+                    {
+					    "FileName":"Printer_2",
+                        "Name": "打印机",
+                        "Path": "SceneObjs/Printer_2"
+                    }
+                ]
+            }
+        },
+		{
+            "Map": "Town",
+            "SchemeItem": {
+                "ModelNameList": [
+                    {
+					    "FileName":"car_seperate_red_0",
+                        "Name": "红色轿车",
+                        "Path": "SceneObjs/car_seperate_red_0"
+                    },
+                    {
+					    "FileName":"cop_seperate_mesh_0",
+                        "Name": "警车",
+                        "Path": "SceneObjs/cop_seperate_mesh_0"
+                    },
+                    {
+					    "FileName":"dumpster_mesh_0",
+                        "Name": "垃圾箱",
+                        "Path": "SceneObjs/dumpster_mesh_0"
+                    },
+                    {
+					    "FileName":"fire_truck_seperate_mesh_0",
+                        "Name": "消防车",
+                        "Path": "SceneObjs/fire_truck_seperate_mesh_0"
+                    },
+                    {
+					    "FileName":"hydrant_mesh_2",
+                        "Name": "消防栓",
+                        "Path": "SceneObjs/hydrant_mesh_2"
+                    },
+                    {
+					    "FileName":"lamp_mesh_1",
+                        "Name": "路灯",
+                        "Path": "SceneObjs/lamp_mesh_1"
+                    },
+                    {
+					    "FileName":"Prop_TirePile_1",
+                        "Name": "轮胎堆",
+                        "Path": "SceneObjs/Prop_TirePile_1"
+                    },
+                    {
+					    "FileName":"traffic_light_mesh_1",
+                        "Name": "红绿灯",
+                        "Path": "SceneObjs/traffic_light_mesh_1"
+                    }
+                ]
+            }
+        }
+    ],
+    "TaggerList": [
+        {
+            "Index": 0,
+            "FileName": "SimplePeople_PoliceManGray01",
+			"Name":"特勤队员",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_PoliceManGray01"
+        },
+        {
+            "Index": 1,
+            "FileName": "SimplePeople_PoliceManGray02",
+			"Name":"警员",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_PoliceManGray02"
+        },
+        {
+            "Index": 2,
+            "FileName": "SimplePeople_PoliceOldManGray",
+			"Name":"警长",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_PoliceOldManGray"
+        },
+		{
+            "Index": 3,
+            "FileName": "SimplePeople_PoliceOldManGreen",
+			"Name":"军官",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_PoliceOldManGreen"
+        },
+        {
+            "Index": 4,
+            "FileName": "SimplePeople_PunkMan01",
+			"Name":"混混",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_PunkMan01"
+        },
+		{
+            "Index": 5,
+            "FileName": "SimplePeople_PunkMan02",
+			"Name":"小偷",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_PunkMan02"
+        },
+        {
+            "Index": 6,
+            "FileName": "SimplePeople_VisitorMan01",
+			"Name":"红帽男游客",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_VisitorMan01"
+        },
+        {
+            "Index": 7,
+            "FileName": "SimplePeople_VisitorMan02",
+			"Name":"褐帽男游客",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_VisitorMan02"
+        },
+        {
+            "Index": 8,
+            "FileName": "SimplePeople_VisitorWoman01",
+			"Name":"金发女游客",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_VisitorWoman01"
+        },
+        {
+            "Index": 9,
+            "FileName": "SimplePeople_VisitorWoman02",
+			"Name":"黑发女游客",
+            "Path": "Player/SimplePeople/Prefabs/SimplePeople_VisitorWoman02"
+        }
+    ]
+}
