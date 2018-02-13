@@ -1,0 +1,128 @@
+
+--查询推荐人昵称
+----------------------------------------------------------------------------------------------------
+
+USE QPAccountsDB_HideSeek
+GO
+
+IF EXISTS (SELECT * FROM DBO.SYSOBJECTS WHERE ID = OBJECT_ID(N'[dbo].[GSP_GP_QuerySpreader]') and OBJECTPROPERTY(ID, N'IsProcedure') = 1)
+DROP PROCEDURE [dbo].[GSP_GP_QuerySpreader]
+GO
+
+
+SET QUOTED_IDENTIFIER ON 
+GO
+
+SET ANSI_NULLS ON 
+GO
+
+----------------------------------------------------------------------------------------------------
+
+-- 查询资料
+CREATE PROC GSP_GP_QuerySpreader
+	@dwUserID INT,								-- 用户 I D
+	@dwSpreaderID INT,					-- 推荐人
+	@strErrorDescribe NVARCHAR(127) OUTPUT		-- 输出信息
+WITH ENCRYPTION AS
+
+-- 属性设置
+SET NOCOUNT ON
+DECLARE @NickName NVARCHAR(31)
+
+-- 执行逻辑
+BEGIN
+
+	
+	DECLARE @SpreaderUserID AS INT
+	-- 查询用户
+	SELECT @SpreaderUserID=UserID FROM AccountsInfo WHERE GameID=@dwSpreaderID
+	
+	IF @SpreaderUserID IS NULL
+	BEGIN
+		SET @strErrorDescribe=N'您输入的用户'+@dwSpreaderID+N'不存在！'
+		RETURN 4
+	END
+	
+	IF @dwSpreaderID = @dwUserID
+	BEGIN
+		SET @strErrorDescribe=N'推荐人不能是自己！'
+		RETURN 5
+	END
+	
+	select @NickName = NickName from AccountsInfo where GameID=@dwSpreaderID
+	select 	@NickName as NickName
+END
+
+RETURN 0
+
+GO
+
+
+--设置推荐人推荐人昵称
+----------------------------------------------------------------------------------------------------
+
+USE QPAccountsDB_HideSeek
+GO
+
+IF EXISTS (SELECT * FROM DBO.SYSOBJECTS WHERE ID = OBJECT_ID(N'[dbo].[GSP_GP_AddSpreader]') and OBJECTPROPERTY(ID, N'IsProcedure') = 1)
+DROP PROCEDURE [dbo].[GSP_GP_AddSpreader]
+GO
+
+
+SET QUOTED_IDENTIFIER ON 
+GO
+
+SET ANSI_NULLS ON 
+GO
+
+----------------------------------------------------------------------------------------------------
+
+-- 查询资料
+CREATE PROC GSP_GP_AddSpreader
+	@dwUserID INT,								-- 用户 I D
+	@dwSpreaderID INT,					-- 推荐人
+	@strErrorDescribe NVARCHAR(127) OUTPUT		-- 输出信息
+WITH ENCRYPTION AS
+
+-- 属性设置
+SET NOCOUNT ON
+DECLARE @NickName NVARCHAR(31)
+
+-- 执行逻辑
+BEGIN
+
+	
+	DECLARE @SpreaderUserID AS INT
+	declare @MineSpreader INT
+	select @MineSpreader = SpreaderID from AccountsInfo where UserID = @dwUserID
+	
+	if @MineSpreader is not null
+	begin
+		SET @strErrorDescribe=N'您已经有推荐人!'
+		RETURN 1
+	end
+	-- 查询用户
+	SELECT @SpreaderUserID=UserID FROM AccountsInfo WHERE GameID=@dwSpreaderID
+	
+	IF @SpreaderUserID IS NULL
+	BEGIN
+		SET @strErrorDescribe=N'您输入的用户'+@dwSpreaderID+N'不存在！'
+		RETURN 4
+	END
+	
+	IF @dwSpreaderID = @dwUserID
+	BEGIN
+		SET @strErrorDescribe=N'推荐人不能是自己！'
+		RETURN 5
+	END
+		
+	--插入推荐人到数据表
+	update AccountsInfo set SpreaderID = @dwSpreaderID where UserID = @dwUserID
+	
+	--推荐人奖励
+END
+
+RETURN 0
+
+GO
+
