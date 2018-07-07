@@ -28,7 +28,7 @@ public class BuyButton : MonoBehaviour
 
     public void buyProduct(int iapID)
     {
-        if(true)
+        if(false)
         {
             GameObject Obj = GameObject.Find("Canvas/Window/TipsNoBtnWindow").gameObject;
             Obj.SetActive(true);

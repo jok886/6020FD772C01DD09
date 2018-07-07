@@ -172,7 +172,7 @@ namespace GameNet
             tagGlobalUserData pGlobalUserData = pGlobalUserInfo.GetGlobalUserData();
             Buffer.BlockCopy(LoginAccount.szPassword, 0, pGlobalUserData.szPassword, 0, LoginAccount.szPassword.Length);
 
-            //mChen add, for Match Time
+            // for Match Time
             Debug.Log("登錄設置kindid");
             LoginAccount.wKindID = GameScene.KIND_ID_JianDe;
 
@@ -200,7 +200,7 @@ namespace GameNet
             Buffer.BlockCopy(RegisterAccount.szLogonPass, 0, pGlobalUserData.szPassword, 0,
                 RegisterAccount.szLogonPass.Length);
 
-            //mChen add, for Match Time
+            // for Match Time
             Debug.Log("發送註冊信息");
             RegisterAccount.wKindID = GameScene.KIND_ID_JianDe;
 
@@ -320,7 +320,7 @@ namespace GameNet
             CMD_GP_LogonSuccess pData =
                 (CMD_GP_LogonSuccess) StructConverterByteArray.BytesToStruct(data, typeof (CMD_GP_LogonSuccess));
 
-            //mChen add, for Match Time
+            // for Match Time
             Loom.QueueOnMainThread(() =>
             {
                 if (hnManager == null)
@@ -338,20 +338,20 @@ namespace GameNet
             pGlobalUserData.lUserScore = pData.lUserScore;
             pGlobalUserData.lUserInsure = pData.lUserInsure;
 
-            //mChen add, for签到
+            // for签到
             pGlobalUserData.wSeriesDate = pData.wSeriesDate;
 
-            //mChen add, 已打场次,for抽奖
+            // 已打场次,for抽奖
             pGlobalUserData.dwPlayCount = pData.dwPlayCount;
 
-            //mChen add,抽奖记录
+            //WQ add,抽奖记录
             pGlobalUserData.dwRaffleCount = pData.dwRaffleCount;
             pGlobalUserData.dwPlayCountPerRaffle = pData.dwPlayCountPerRaffle;
 
-            //mChen add, 代理
+            // 代理
             pGlobalUserData.iSpreaderLevel = pData.iSpreaderLevel;  // -1:不是代理人
 
-            //mChen add, for HideSeek:查询警察模型库
+            // for HideSeek:查询警察模型库
             pGlobalUserData.lModelIndex0 = pData.lModelIndex0;
             
             pGlobalUserData.bGPIsForAppleReview = (pData.cbGPIsForAppleReview != 0);
@@ -360,7 +360,7 @@ namespace GameNet
             string szHeadHttp = GlobalUserInfo.GBToUtf8(pData.szHeadHttp);
             Buffer.BlockCopy(pData.szHeadHttp, 0, pGlobalUserData.szHeadHttp, 0, pData.szHeadHttp.Length);
 
-            //mChen add,公告信息
+            //WQ add,公告信息
             string szPublicNotice = GlobalUserInfo.GBToUtf8(pData.szPublicNotice);
             Buffer.BlockCopy(pData.szPublicNotice, 0, pGlobalUserData.szPublicNotice, 0, pData.szPublicNotice.Length);
 
@@ -488,7 +488,7 @@ namespace GameNet
                 case MsgDefine.SUB_GR_ONLINE_FINISH:
                     return onSocketOnlineFinish(data, size);
 
-                //mChen add. for HideSeek
+                //WQ add. for HideSeek
                 //大厅列表
                 case MsgDefine.SUB_GP_LIST_LOBBY:
                     return onSocketListLobby(data, size);
@@ -545,7 +545,7 @@ namespace GameNet
             return true;
         }
 
-        //mChen add. for HideSeek
+        //WQ add. for HideSeek
         //大厅列表
         bool onSocketListLobby(byte[] data, int size)
         {

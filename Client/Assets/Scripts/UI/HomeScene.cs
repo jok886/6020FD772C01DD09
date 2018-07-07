@@ -55,7 +55,7 @@ namespace GameNet
         {
             UserInfo.getInstance().reqAccountInfo();
 
-            //mChen add, to store HeadHttp
+            // to store HeadHttp
             //delay 3s to avoid cover mMissionType to MISSION_INDIVIDUAL_MODIFY when reqAccountInfo(MISSION_INDIVIDUAL_Account) has not sent yet
             //UserInfo.getInstance().modifyIndivHeadHttp(2.0f);
         }

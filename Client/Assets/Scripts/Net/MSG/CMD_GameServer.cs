@@ -180,13 +180,13 @@ namespace GameNet
         public const int SUB_GF_GAME_OPTION = 1;            //游戏配置
         public const int SUB_GF_USER_READY = 2;             //用户准备
         public const int SUB_GF_LOOKON_CONFIG = 3;          //旁观配置
-        //mChen add, for HideSeek
+        // for HideSeek
         public const int SUB_GF_CREATER_PRESS_START = 4;    //房主是否点击开始按钮
         public const int SUB_GF_INVENTORY_CREATE = 5;	    //道具生成同步：服务器通知客户端生成道具
 
         //聊天命令
-        public const int SUB_GF_USER_CHAT_INDEX = 8; //用户聊天 mChen add
-        public const int SUB_GF_USER_EXPRESSION_INDEX = 9; //会话表情 mChen add
+        public const int SUB_GF_USER_CHAT_INDEX = 8; //用户聊天 WQ add
+        public const int SUB_GF_USER_EXPRESSION_INDEX = 9; //会话表情 WQ add
         public const int SUB_GF_USER_CHAT = 10; //用户聊天
         public const int SUB_GF_USER_EXPRESSION = 11; //用户表情
         public const int SUB_GR_TABLE_TALK = 12; //用户聊天
@@ -529,7 +529,7 @@ namespace GameNet
         //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 128)]
         //public byte[] szGameRule;                       //游戏规则szGameRule[4][32]
 
-        //mChen add,金币场模拟比赛场
+        //WQ add,金币场模拟比赛场
         public byte cbMatchPlayCout;
         public systemtime MatchStartTime;                //游戏开始日期
         public systemtime MatchEndTime;                     //游戏结束日期
@@ -557,7 +557,7 @@ namespace GameNet
         public long lBaseScore;
         public byte PlayerCount;                            //游戏人数
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public byte cbChoosedMapIndex;
         public byte cbChoosedModelIndex;
     };
@@ -575,9 +575,9 @@ namespace GameNet
     public struct CMD_GR_Join_Private
     {
         public uint dwRoomNum;                                //房间ID
-        public byte cbGameTypeIdex; //mChen add
+        public byte cbGameTypeIdex; //WQ add
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public byte cbChoosedModelIndex;
     };
 
@@ -594,7 +594,7 @@ namespace GameNet
         public uint dwCreateUserID;
         public uint dwPlayTotal;      //总局数
 
-        //mChen add
+        //WQ add
         public byte cbRoomType;
         public long lBaseScore;
         //ZY add
@@ -685,7 +685,7 @@ namespace GameNet
     {
         public byte cbEndReason;
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public byte cbMapIndex;
         //for随机种子同步
         public ushort wRandseed;
@@ -709,7 +709,7 @@ namespace GameNet
             int offset = 0;
             cbEndReason = kData[offset++];
 
-            //mChen add, for HideSeek
+            // for HideSeek
             cbMapIndex = kData[offset];
             offset += Marshal.SizeOf(cbMapIndex);
             wRandseed = BitConverter.ToUInt16(kData, offset);
@@ -753,7 +753,7 @@ namespace GameNet
         public uint dwClientVersion;                  //游戏版本
     };
 
-    //mChen add
+    //WQ add
     //////////////////////////////////////////////////////////////////////////
     //用户聊天
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]

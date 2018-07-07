@@ -27,7 +27,7 @@ public class GameObjectsManager
 
     private PlayerTeam[] _playerTeams;
 
-    //mChen add, for HideSeek WangHu
+    // for HideSeek WangHu
     public List<PlayerEventItem> PlayerEventList = new List<PlayerEventItem>();
 
     public void CreateHumanTeams()
@@ -141,7 +141,7 @@ public class GameObjectsManager
         return player;
     }
 
-    //mChen add, for HideSeek WangHu
+    // for HideSeek WangHu
     public PlayerBase GetPlayerByChairID(PlayerTeam.PlayerTeamType teamType, int nChairID, byte cbAIId = HNMJ_Defines.INVALID_AI_ID)
     {
         PlayerBase player = null;

@@ -22,7 +22,7 @@ namespace GameNet
         public static string m_kNickName = "Name_";
         public static bool m_bMale;
         //public static string m_headURL = "0";
-        public static string m_strServerIP = "127.0.0.1";    //101.132.137.47  139.224.115.49
+        public static string m_strServerIP = "139.224.115.49";    //101.132.137.47  139.224.115.49
         public static int m_nLogonServerPort = 10081; 
 #else
         private string m_kAccount = "WeiXinCMM4";
@@ -266,7 +266,7 @@ namespace GameNet
                 Buffer.BlockCopy(tempBuf, 0, loginAccount.szPassword, 0, tempBuf.Length);
                 m_kLoginMission.loginAccount(loginAccount);
 
-                ////mChen add, to set pGlobalUserData.szHeadHttp
+                //// to set pGlobalUserData.szHeadHttp
                 //GlobalUserInfo pGlobalUserInfo = GlobalUserInfo.GetInstance();
                 //tagGlobalUserData pGlobalUserData = pGlobalUserInfo.GetGlobalUserData();
                 /////string strHeadimgurl = "http:\\s1";

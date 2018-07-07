@@ -180,7 +180,7 @@ namespace GameNet
         //组件属性
         public const int GAME_PLAYER = 20;                          //游戏人数
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         public const byte INVALID_AI_ID = 255;
 
         public const int GAME_GENRE = (SocketDefines.GAME_GENRE_SCORE | SocketDefines.GAME_GENRE_MATCH | SocketDefines.GAME_GENRE_GOLD);	//游戏类型
@@ -211,7 +211,7 @@ namespace GameNet
 
         public const int SUB_S_CHAT_PLAY = 1000;                           //获取游戏中聊天
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public const int SUB_S_HideSeek_HeartBeat = 115;
         public const int SUB_S_HideSeek_AICreateInfo = 116;
 
@@ -245,13 +245,13 @@ namespace GameNet
         public const int SUB_C_TRUSTEE = 4;								//用户托管
         public const int SUB_C_XIAOHU = 5;                                  //小胡
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public const int SUB_C_HIDESEEK_PLAYER_INFO = 6;
         public const int SUB_C_HIDESEEK_PLAYERS_INFO = 7;
 
         public const int SUB_C_CHAT_PLAY = 1001;                        //发送游戏中聊天    
 
-        //mChen add
+        //WQ add
         //结束原因
         public const byte GER_NORMAL = 0x00;                                //常规结束
         public const byte GER_DISMISS = 0x01;                               //游戏解散
@@ -271,7 +271,7 @@ namespace GameNet
         public ushort wProvideUser; //供应用户
     };
 
-    //mChen add, for HideSeek
+    // for HideSeek
     //道具同步
     [StructLayoutAttribute(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public struct InventoryItem
@@ -286,7 +286,7 @@ namespace GameNet
     [StructLayoutAttribute(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public struct CMD_S_StatusFree
     {
-        //mChen add, for HideSeek
+        // for HideSeek
         public byte cbGameStatus;
         public byte cbMapIndex;
         //for随机种子同步
@@ -432,7 +432,7 @@ namespace GameNet
         public ushort wCurrentUser;                      //当前用户
         public byte bTail;                             //末尾发牌
 
-        //mChen add
+        //WQ add
         //public byte cbActionCard;                      //动作扑克
         public tagGangCardResult tGangCard;				//杠数据（最多有5个杠）
         public byte bKaiGangYaoShaiZi;                 //是否开杠摇骰子
@@ -506,10 +506,10 @@ namespace GameNet
         //public byte cbNiaoCount;   //鸟牌个数
         //public byte cbNiaoPick;    //中鸟个数
 
-        //mChen add
+        //WQ add
         public byte cbEndReason;
 
-        ////mChen add：剩余库存扑克
+        ////WQ add：剩余库存扑克
         //public byte cbLeftCardCount;
         //[MarshalAs(UnmanagedType.ByValArray, SizeConst = HNMJ_Defines.MAX_REPERTORY)]
         //public byte[] cbRepertoryLeftCard;
@@ -560,7 +560,7 @@ namespace GameNet
         public byte cbCardData;                            //扑克数据
     };
 
-    //mChen add, for HideSeek
+    // for HideSeek
     //客户端玩家事件信息
     [StructLayoutAttribute(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public struct PlayerEventItem
@@ -790,7 +790,7 @@ namespace GameNet
         }
     };
 
-    //mChen add, for HideSeek
+    // for HideSeek
     //AI分配信息
     [StructLayoutAttribute(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public struct AICreateInfoItem
@@ -883,7 +883,7 @@ namespace GameNet
         public const int WIK_CHI_HU = 0x40;							//吃胡类型
         public const int WIK_ZI_MO = 0x80;								//自摸
 
-        public const int WIK_GANG_YAOSHAIZI = 0x20;							//开杠摇骰子 mChen add
+        public const int WIK_GANG_YAOSHAIZI = 0x20;							//开杠摇骰子 WQ add
 
         //////////////////////////////////////////////////////////////////////////
         //胡牌定义
@@ -1451,7 +1451,7 @@ namespace GameNet
             setChiHuCard(0);
 
             //selfUICommandList.Clear();
-            //mChen add,补花
+            //WQ add,补花
             m_cbHuaCardCount = 0;
             Array.Clear(m_cbHuaCard, 0, m_cbHuaCard.Length);
             ///memset(m_cbHuaCard, 0, sizeof(m_cbHuaCard));
@@ -1603,7 +1603,7 @@ namespace GameNet
             return m_cbHuaCardCount;
         }
 
-        //mChen add,补花
+        //WQ add,补花
         public void setHuaCard(byte[] pHuaCardData, int iCout)
         {
             m_cbHuaCard = pHuaCardData;
@@ -1722,7 +1722,7 @@ namespace GameNet
                     byte cbCenterCard = m_kWeaveItemArray[i].cbCenterCard;
                     if ((cbCenterCard == pNetInfo.cbOperateCard) && (cbWeaveKind == HNMJLogic_Defines.WIK_PENG))
                     {
-                        ///bNewWaveIn = true;//mChen add,fix补杠点杠后Weave牌组UI没更新
+                        ///bNewWaveIn = true;//WQ add,fix补杠点杠后Weave牌组UI没更新
 
                         cbWeaveIndex = i;
                         m_iNewWaveIndex = cbWeaveIndex;
@@ -2422,7 +2422,7 @@ namespace GameNet
             });
         }
 
-        //mChen add
+        //WQ add
         public bool m_bWasKaiGangYaoShaiZi; //是否开杠摇骰子
         public byte m_kCardDataOfZiMo; //发到的牌
         public bool m_bCanDirectSendCard;//暗杠，补刚或者吃胡时，可以直接出牌，无需点“过”按钮

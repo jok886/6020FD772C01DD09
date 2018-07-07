@@ -40,7 +40,7 @@ public class PlayerBase : MonoBehaviour
     protected Animator _avatarAnimator;
     protected CharacterController _controller;
 
-    //mChen add, for HideSeek WangHu
+    // for HideSeek WangHu
     public int ChairID = 0;
     public string ObjNamePicked = "";
     public float CurMoveSpeed = 0f;
@@ -315,7 +315,7 @@ public class PlayerBase : MonoBehaviour
                 ///Debug.Log("Error:GetCurSpeed: no CharacterController");
             }
 
-            //mChen add, for HideSeek WangHu
+            // for HideSeek WangHu
             if (!IsLocalHuman())
             {
                 //强制播放走路动画

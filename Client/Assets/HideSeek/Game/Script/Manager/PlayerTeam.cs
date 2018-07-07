@@ -108,7 +108,7 @@ public class PlayerTeam
 
         GameObject taggerTeam = GameObject.Find("Player/TaggerTeam");
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         bool bIsLocalHuman = (_teamType == GameObjectsManager.s_LocalHumanTeamType && nChairID == HNGameManager.m_iLocalChairID);
         GlobalUserInfo pGlobalUserInfo = GlobalUserInfo.GetInstance();
         tagGlobalUserData pGlobalUserData = pGlobalUserInfo.GetGlobalUserData();
@@ -360,7 +360,7 @@ public class PlayerTeam
         player.PlayerIndexInTeam = playerIndexInTeam;
         player.TeamType = PlayerTeamType.TaggerTeam;
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         player.ChairID = nChairID;
         player.IsAI = isAI;
         player.AIId = cbAIId;
@@ -429,7 +429,7 @@ public class PlayerTeam
 
         GameObject hideTeam = GameObject.Find("Player/HideTeam");
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         bool bIsLocalHuman = (_teamType == GameObjectsManager.s_LocalHumanTeamType && nChairID == HNGameManager.m_iLocalChairID);
         if (bIsLocalHuman && !isAI)
             HNGameManager.MapIndex.GetComponent<Text>().text = pGlobalUserData.cbMapIndexRand.ToString() + "   " + cbModelIndex;
@@ -706,7 +706,7 @@ public class PlayerTeam
         //隐藏躲藏者Renderer
         player.SetGameObjVisible(false);
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         player.ChairID = nChairID;
         player.IsAI = isAI;
         player.AIId = cbAIId;
@@ -773,7 +773,7 @@ public class PlayerTeam
         return null;
     }
 
-    //mChen add, for HideSeek WangHu
+    // for HideSeek WangHu
     public PlayerBase GetPlayerByChairID(int nChaidID, byte cbAIId)
     {
         foreach (PlayerBase player in _playerArray)

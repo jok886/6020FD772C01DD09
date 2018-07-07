@@ -29,8 +29,8 @@ namespace GameNet
     {
         public int myruntime = 0;
         public static int KIND_ID; //游戏ID mChen const static int KIND_ID = 310; 311 312
-        public static int SERVER_TYPE = SocketDefines.GAME_GENRE_EDUCATE; //mChen add, 房间类型 GAME_GENRE_EDUCATE, GAME_GENRE_MATCH, GAME_GENRE_GOLD
-        public static bool IS_MATCH_SIGNUP; //mChen add,比赛报名
+        public static int SERVER_TYPE = SocketDefines.GAME_GENRE_EDUCATE; // 房间类型 GAME_GENRE_EDUCATE, GAME_GENRE_MATCH, GAME_GENRE_GOLD
+        public static bool IS_MATCH_SIGNUP; //WQ add,比赛报名
 
         public static uint VERSION_SERVER = GameServerDefines.VERSION_MOBILE_IOS; //程序版本
         public static uint VERSION_CLIENT = GameServerDefines.VERSION_MOBILE_IOS;
@@ -62,7 +62,7 @@ namespace GameNet
 
         public virtual bool init()
         {
-            //mChen add, clear UI info, fix UI bug after 解散房间
+            // clear UI info, fix UI bug after 解散房间
             Loom.QueueOnMainThread(() =>
             {
                 hnManager.ResetPlayersUIInfo();
@@ -242,7 +242,7 @@ namespace GameNet
 
             //hnManager.m_cbGameEndReason = pNetInfo.cbEndReason;
 
-            ////mChen add, for HideSeek
+            //// for HideSeek
             //GlobalUserInfo pGlobalUserInfo = GlobalUserInfo.GetInstance();
             //tagGlobalUserData pGlobalUserData = pGlobalUserInfo.GetGlobalUserData();
             //pGlobalUserData.cbMapIndexRand = pNetInfo.cbMapIndex;
@@ -250,7 +250,7 @@ namespace GameNet
             //pGlobalUserData.wRandseedForRandomGameObject = pNetInfo.wRandseedForRandomGameObject;
             //pGlobalUserData.wRandseedForInventory = pNetInfo.wRandseedForInventory;
 
-            ////mChen add, for HideSeek
+            //// for HideSeek
             //UserInfo.getInstance().reqAccountInfo();
             //Loom.QueueOnMainThread(() =>
             //{
@@ -590,7 +590,7 @@ namespace GameNet
             }
             else
             {
-                //mChen add, temp
+                // temp
                 Loom.QueueOnMainThread(() =>
                 {
                     hnManager.LoadHideSeekSceneOfWangHu();
@@ -623,7 +623,7 @@ namespace GameNet
             byte cbGameStatus = pNetInfo.cbGameStatus;
             Debug.Log("OnPlayScence : cbGameStatus=" + cbGameStatus + " UserStatus=" + nStatus + " bEnteredGameScene=" + hnManager.bEnteredGameScene);
 
-            //mChen add, for HideSeek:
+            // for HideSeek:
             //if (nStatus != SocketDefines.US_LOOKON && !hnManager.bEnteredGameScene)
             //{
             //    //在大厅重连?
@@ -635,7 +635,7 @@ namespace GameNet
             defaultState();
         }
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         public void OnSocketGFSubHeartBeat(byte[] data, ushort wDataSize)
         {
             Loom.QueueOnMainThread(() =>
@@ -702,7 +702,7 @@ namespace GameNet
 
                     Debug.Log("---------------------CreatePlayer m_pLocal");
 
-                    //mChen add, for HideSeek
+                    // for HideSeek
                     Loom.QueueOnMainThread(() =>
                     {
                         GameObjectsManager.s_LocalHumanTeamType = PlayerTeam.PlayerTeamType.TaggerTeam;
@@ -729,7 +729,7 @@ namespace GameNet
                     GamePlayer pPlayer = getPlayerByChairID(pIClientUserItem.GetChairID());
                     pPlayer.setUserItem(pIClientUserItem);
 
-                    //mChen add, for HideSeek
+                    // for HideSeek
                     Loom.QueueOnMainThread(() =>
                     {
                         if (GameManager.s_gameSingleMultiType == GameSingleMultiType.MultiGame_WangHu)
@@ -813,7 +813,7 @@ namespace GameNet
             addNetCB(HNMJ_Defines.SUB_S_GANG_SCORE, this, OnSubGangScore, "OnSubGangScore");
             addNetCB(HNMJ_Defines.SUB_S_REPLACE_CARD, this, OnSubReplaceCard, "OnSubReplaceCard");
 
-            //mChen add, for HideSeek
+            // for HideSeek
             addNetCB(HNMJ_Defines.SUB_S_HideSeek_HeartBeat, this, OnSocketGFSubHeartBeat, "OnSocketGFSubHeartBeat");
             addNetCB(HNMJ_Defines.SUB_S_HideSeek_AICreateInfo, this, OnSocketGFSubAICreate, "OnSocketGFSubAICreate");
 
@@ -1144,7 +1144,7 @@ namespace GameNet
             //消息处理
             CMD_S_GameEnd pGameEnd = (CMD_S_GameEnd)StructConverterByteArray.BytesToStruct(pBuffer, typeValue);
 
-            ////mChen add, for HideSeek WangHu
+            //// for HideSeek WangHu
             //Loom.QueueOnMainThread(() =>
             //{
             //    hnManager.ReturnFromBigFinalToHallScene();

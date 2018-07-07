@@ -45,7 +45,7 @@ public class CreateOrJoinRoom : MonoBehaviour
 
     void Start()
     {
-        //mChen add, try to fix返回大厅后，有小概率HideTeam会剩余一个没清除
+        // try to fix返回大厅后，有小概率HideTeam会剩余一个没清除
         GameObjectsManager.GetInstance().ClearPlayers();
 
         m_fDeltaTimeAfterLastClick = 0f;
@@ -92,7 +92,7 @@ public class CreateOrJoinRoom : MonoBehaviour
             hnGameManager.m_cbPlayCoutIdex = 0;
             hnGameManager.m_cbPlayCostTypeIdex = 1;
 
-            //mChen add, for HideSeek
+            // for HideSeek
             hnGameManager.m_cbGameEndReason = HNMJ_Defines.GER_NOT_END;
         }
 
@@ -147,7 +147,7 @@ public class CreateOrJoinRoom : MonoBehaviour
                 hnGameManager.JoinRace_MJ();
             });
 
-            //mChen add, for HideSeek
+            // for HideSeek
             ///hnGameManager.LoadHideSeekSceneOfWangHu();
         }
     }
@@ -180,7 +180,7 @@ public class CreateOrJoinRoom : MonoBehaviour
             });//,2.0f);
                //hnGameManager.UpDatePlayerScore(); //头像旁边分数更新
 
-            //mChen add, for HideSeek
+            // for HideSeek
             ///hnGameManager.LoadHideSeekSceneOfWangHu();
         }
     }
@@ -273,7 +273,7 @@ public class CreateOrJoinRoom : MonoBehaviour
         //RoomIdValue = 0;
         //RoomId.text = "";
 
-        //mChen add, for HideSeek
+        // for HideSeek
         ///hnGameManager.LoadHideSeekSceneOfWangHu();
     }
 

@@ -223,7 +223,7 @@ namespace GameNet
 
         public void addNetCB(int iIdex, object pScence, NET_CBInfo.Net_Callback pCallBack, string kCallName)
         {
-            //mChen add temp
+            //WQ add temp
             foreach (var netCbInfo in m_kCBInfoList)
             {
                 if (iIdex == netCbInfo.iIdex)

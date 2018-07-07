@@ -53,7 +53,7 @@ namespace GameNet
             return true;
         }
 
-        public bool connectGameServerByKindIDAndServerType(ushort wKindID, ushort wServerType) //mChen add
+        public bool connectGameServerByKindIDAndServerType(ushort wKindID, ushort wServerType) //WQ add
         {
             CGameServerItem pMinPlayerCoutServer = CServerListData.getGameServerByKindAndServerType(wKindID, wServerType);
             if (pMinPlayerCoutServer!=null)
@@ -152,7 +152,7 @@ namespace GameNet
             closeClinet();
             //TimeManager::Instance().removeByFun(TIME_CALLBACK(GameManagerBase::closeClinet, this));
 
-            ////mChen add, fix有人在团灭前断线，重连回来（已经下一局）还在原来的房间，时间一直没有更新，且没有跳出断线UI
+            //// fix有人在团灭前断线，重连回来（已经下一局）还在原来的房间，时间一直没有更新，且没有跳出断线UI
             //Loom.QueueOnMainThread(() =>
             //{
             //    if (HNGameManager.bFakeServer == false)
@@ -308,7 +308,7 @@ namespace GameNet
             {
                 float fDelayTimeOfUserEnter = 1.0f;
 #if ApplyAutoReConnect
-                //mChen add, for HideSeek
+                // for HideSeek
                 if (bIsReconnect)
                 {
                     //断线重连

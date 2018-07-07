@@ -286,13 +286,13 @@ namespace GameNet
 
         [MarshalAsAttribute(UnmanagedType.ByValArray, SizeConst = SocketDefines.LEN_UNDER_WRITE)] public byte[] szUnderWrite; //个性签名
 
-        //mChen add
+        //WQ add
         [MarshalAsAttribute(UnmanagedType.ByValArray, SizeConst = SocketDefines.LEN_USER_NOTE)] public byte[] szHeadHttp;
         public uint dwClientAddr; //连接地址
         public uint dwPlayCount;
         public systemtime RegisterDate;
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         public byte cbTeamType;
         public byte cbModelIndex;
         public byte cbChoosedModelIndexOfTagger;
@@ -377,12 +377,12 @@ namespace GameNet
         public uint dwExperience; //用户经验
         public uint lLoveLiness; //用户魅力
 
-        //mChen add
+        //WQ add
         public uint dwClientAddr;						//连接地址
         public uint dwPlayCount;
         public systemtime RegisterDate;
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         public byte cbTeamType;
         public byte cbModelIndex;
     };
@@ -444,7 +444,7 @@ namespace GameNet
 
     //////////////////////////////////////////////////////////////////////////////////
 
-    //mChen add, for HideSeek
+    // for HideSeek
     //大厅子项
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     struct tagGameLobby
@@ -660,7 +660,7 @@ namespace GameNet
         //游戏状态
         public const int GAME_STATUS_FREE = 0; //空闲状态
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public const int GAME_STATUS_HIDE = 1;
 
         public const int GAME_STATUS_PLAY = 100; //游戏状态
@@ -990,7 +990,7 @@ namespace GameNet
         public const int SUB_GP_LIST_MATCH = 105; //比赛列表
         public const int SUB_GP_VIDEO_OPTION = 106; //视频配置
 
-        //mChen add. for HideSeek
+        //WQ add. for HideSeek
         public const int SUB_GP_LIST_LOBBY = 107; //大厅列表
 
         //完成信息
@@ -1016,7 +1016,7 @@ namespace GameNet
         public const int SUB_GP_MODIFY_ACCOUNTS = 104; //修改帐号
         public const int SUB_GP_MODIFY_SPREADER = 105; //修改推荐人
 
-        //mChen add
+        //WQ add
         //代理
         public const int SUB_GP_ADDDEL_SPREADER = 106;                                  //增加/删除推荐人身份
         public const int SUB_GP_QUERY_SPREADERS_INFO = 107;									//查询代理人列表
@@ -1028,7 +1028,7 @@ namespace GameNet
         //企业提现
         public const int SUB_GP_ADD_ENTERPRISE_PAYMENT = 128;
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public const int SUB_GP_BOUGHT_TAGGER_MODEL = 129;
 
         public const int SUB_GP_QUERY_NICKNAME = 116; //查询用户昵称
@@ -1066,12 +1066,12 @@ namespace GameNet
         public const int SUB_GP_CHECKIN_RESULT = 223; //签到结果
         public const int SUB_GP_CHECKIN_AWARD = 224; //签到奖励
 
-        //mChen add
+        //WQ add
         //抽奖服务
         public const int SUB_GP_RAFFLE_DONE = 230;
         public const int SUB_GP_RAFFLE_RESULT = 231;
 
-        //mChen add, for HideSeek
+        // for HideSeek
         //大厅聊天
         public const int SUB_GP_LOBBY_CHAT= 232;
 
@@ -1115,11 +1115,11 @@ namespace GameNet
         public const int SUB_GP_SPREADER_RESOULT = 520; //设置推荐人结果
 
 
-        //mChen add
+        //WQ add
         //查询代理人列表结果
         public const int SUB_GP_SPREADERS_INFO_RESOULT = 521;
 
-        //mChen add
+        //WQ add
         //内购
         public const int SUB_GP_ADD_PAYMENT_RESULT = 530;
         //名下用户交易信息
@@ -1127,7 +1127,7 @@ namespace GameNet
         //企业提现
         public const int SUB_GP_ADD_ENTERPRISE_PAYMENT_RESULT = 532;
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public const int SUB_GP_BOUGHT_TAGGER_MODEL_RESULT = 533;
 
         //赚金排行榜
@@ -1299,7 +1299,7 @@ namespace GameNet
         }
     };
 
-    //mChen add
+    //WQ add
     //增加/删除推荐人身份
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     struct CMD_GP_AddDelSpreader
@@ -1353,7 +1353,7 @@ namespace GameNet
         }
     };
 
-    //mChen add
+    //WQ add
     //内购
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     struct CMD_GP_AddPayment
@@ -1402,7 +1402,7 @@ namespace GameNet
         }
     };
 
-    //mChen add, for HideSeek
+    // for HideSeek
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     struct CMD_GP_BoughtTaggerModel
     {
@@ -1762,7 +1762,7 @@ namespace GameNet
         public byte bSignup; //报名标识
         public byte bSuccessed; //成功标识
 
-        //mChen add
+        //WQ add
         public systemtime MatchSignupStartTime;
         public systemtime MatchSignupEndTime;
         public systemtime MatchStartTime;
@@ -2049,7 +2049,7 @@ namespace GameNet
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public struct CMD_GP_SpreaderResoult
     {
-        //mChen add
+        //WQ add
         public byte cbOperateType;					//操作类型：0-绑定代理，1-增加代理，2-删除代理
         public uint dwBindSpreaderId;               //绑定操作：绑定的代理ID
 
@@ -2058,7 +2058,7 @@ namespace GameNet
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 128)] public byte[] szDescribeString; //成功消息
     };
 
-    //mChen add
+    //WQ add
     //查询代理人
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public struct SpreaderInfoItem
@@ -2194,7 +2194,7 @@ namespace GameNet
         }
     };
 
-    //mChen add
+    //WQ add
     //内购
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     struct CMD_GP_AddPaymentResult
@@ -2314,7 +2314,7 @@ namespace GameNet
         public byte[] szDescribeString;             //成功消息               
     };
 
-    //mChen add, for HideSeek
+    // for HideSeek
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     struct CMD_GP_BoughtTaggerModelResult
     {
@@ -2482,7 +2482,7 @@ namespace GameNet
     };
 
 
-    //mChen add，抽奖
+    //WQ add，抽奖
     //执行抽奖
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     struct CMD_GP_RaffleDone
@@ -2513,7 +2513,7 @@ namespace GameNet
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 128)] public byte[] szNotifyContent; //提示内容
     };
-    //mChen add, for HideSeek
+    // for HideSeek
     //大厅聊天数据
     [StructLayoutAttribute(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public struct CMD_GP_CHAT
@@ -2653,7 +2653,7 @@ namespace GameNet
 
         //[MarshalAs(UnmanagedType.ByValArray, SizeConst = SocketDefines.LEN_TOKEN)]public byte[] szToken;
 
-        //mChen add, for Match Time
+        // for Match Time
         public ushort wKindID;
 
         public uint cbValidateFlags; //校验标识
@@ -2731,7 +2731,7 @@ namespace GameNet
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = SocketDefines.LEN_COMPELLATION)] public byte[] szCompellation;
         //真实名字
 
-        //mChen add, for Match Time
+        // for Match Time
         public ushort wKindID;
 
         public byte cbValidateFlags; //校验标识
@@ -2801,24 +2801,24 @@ namespace GameNet
         //配置信息
         public byte cbShowServerStatus; //显示服务器状态
 
-        //mChen add,for Match Time
+        //WQ add,for Match Time
         public systemtime MatchStartTime;
         public systemtime MatchEndTime;
 
-        //mChen add, for签到
+        // for签到
         public ushort wSeriesDate;
 
-        //mChen add, 已打场次,for抽奖
+        // 已打场次,for抽奖
         public uint dwPlayCount;
 
-        //mChen add,抽奖记录
+        //WQ add,抽奖记录
         public uint dwRaffleCount;
         public uint dwPlayCountPerRaffle;
 
-        //mChen add, 代理
+        // 代理
         public int iSpreaderLevel;  //代理等级： -1:不是代理人
 
-        //mChen add, for HideSeek:查询警察模型库
+        // for HideSeek:查询警察模型库
         public long lModelIndex0;
 
         public byte cbGPIsForAppleReview;
@@ -2827,7 +2827,7 @@ namespace GameNet
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = SocketDefines.LEN_USER_NOTE)]
         public byte[] szHeadHttp;
 
-        //mChen add,公告信息
+        //WQ add,公告信息
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = SocketDefines.LEN_USER_NOTE)]
         public byte[] szPublicNotice;
     };

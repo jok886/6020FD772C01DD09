@@ -190,7 +190,7 @@ public class GameManager : MonoBehaviour
             //GameManager.s_NetWorkClient.TryToJoinMatch();
         }
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         InitGame();
         if (m_hnGameManager != null)
         {
@@ -214,7 +214,7 @@ public class GameManager : MonoBehaviour
             m_hnGameManager.Exp.SetActive(true);
     }
 
-    //mChen add, for HideSeek WangHu
+    // for HideSeek WangHu
     public void InitGame()
     {
         InitMainCamera();
@@ -391,7 +391,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //mChen add, for HideSeek WangHu
+    // for HideSeek WangHu
     private void SetPlayerInfoItem(ref PlayerInfoItem tmpPlayerInfoItem, PlayerBase playerBase)
     {
         //Set Pos
@@ -445,7 +445,7 @@ public class GameManager : MonoBehaviour
         {
             //Debug.Log("SendClientPlayersInfo_WangHu: return for CServerItem.get().GetClientKernelSink() == null");
 
-            //mChen add, fix在调用StartOrStopGameSceneHeartBeat(true)前断线（在LocalUserEnter里面），导致游戏时间一直没有更新，但没有跳出断线UI
+            // fix在调用StartOrStopGameSceneHeartBeat(true)前断线（在LocalUserEnter里面），导致游戏时间一直没有更新，但没有跳出断线UI
             //如：有人在团灭前断线，重连回来（已经下一局）还在原来的房间，时间一直没有更新，但没有跳出断线UI
             if (serviceStatus == enServiceStatus.ServiceStatus_ServiceIng)
             {
@@ -481,7 +481,7 @@ public class GameManager : MonoBehaviour
         //{
         //    m_bSettedNetCB = true;
 
-        //    //mChen add, for HideSeek WangHu
+        //    // for HideSeek WangHu
         //    kernel.addNetCB(HNMJ_Defines.SUB_S_HideSeek_HeartBeat, kernel, OnSubHeartBeat_WangHu, "OnSubHeartBeat_WangHu");
         //    kernel.addNetCB(HNMJ_Defines.SUB_S_HideSeek_AICreateInfo, kernel, OnSubAICreateInfo_WangHu, "OnSubAICreateInfot_WangHu");
         //}
@@ -491,7 +491,7 @@ public class GameManager : MonoBehaviour
         IClientUserItem pMeItem = CServerItem.get().GetMeUserItem();
         if (pMeItem == null)
         {
-            //mChen add, fix在游戏阶段最后一秒断线，卡死在重连中
+            // fix在游戏阶段最后一秒断线，卡死在重连中
             //游戏阶段最后一秒断线，然后就卡死在重连中，一直进这里
             if (serviceStatus == enServiceStatus.ServiceStatus_ServiceIng)
             {
@@ -963,7 +963,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //mChen add, for HideSeek
+    // for HideSeek
     //AI分配信息
     public void OnSubAICreateInfo_WangHu(byte[] pBuffer, ushort wDataSize)
     {
@@ -1027,7 +1027,7 @@ public class GameManager : MonoBehaviour
             LocalGameServer.GetInstance().Heartbeat();
             ControlManager.GetInstance().DetectLocalControl();
 
-            //mChen add, for HideSeek WangHu
+            // for HideSeek WangHu
             if (s_gameSingleMultiType == GameSingleMultiType.MultiGame_WangHu)
             {
                 s_cbSendClientCount++;

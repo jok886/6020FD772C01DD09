@@ -97,7 +97,7 @@ namespace GameNet
             MISSION_INDIVIDUAL_MODIFY,
             MISSION_INDIVIDUAL_SPREADER,
 
-            //mChen add
+            //WQ add
             //代理
             MISSION_INDIVIDUAL_ADDDEL_SPREADER,             //增加/删除推荐人身份
             MISSION_INDIVIDUAL_QUERY_SPREADERS_INFO,		//查询代理人列表
@@ -112,7 +112,7 @@ namespace GameNet
             //企业提现
             MISSION_INDIVIDUAL_ADD_ENTERPRISE_PAYMENT,
 
-            //mChen add, for HideSeek
+            // for HideSeek
             MISSION_INDIVIDUAL_BOUGHT_TAGGER_MODEL,
             //商品购买 WQ
             MISSION_INDIVIDUAL_ADD_SHOPITEM,
@@ -143,7 +143,7 @@ namespace GameNet
 // 查询个人资料
         public void query(int iAccountID, bool bRecStop = true)
         {
-            //mChen add, for headPic
+            // for headPic
             return;
 
             m_bRevStop = bRecStop;
@@ -213,7 +213,7 @@ namespace GameNet
         //{
         //}
 
-        //mChen add
+        //WQ add
         //增加/删除推荐人身份
         public void addDelSpreader(uint dwSpreaderID, string szSpreaderRealName, string szSpreaderTelNum, string szSpreaderWeiXinAccount, uint dwParentSpreaderID, ushort wSpreaderLevel, bool bIsAddSpreader)
         {
@@ -354,7 +354,7 @@ namespace GameNet
             
         }
 
-        //mChen add
+        //WQ add
         //游戏内购
         public void AddPayment(uint dwPayment, uint dwBoughtDiamond)
         {
@@ -381,7 +381,7 @@ namespace GameNet
             start();
         }
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public void BoughtTaggerModel(uint dwPayment, byte cbPaymentType, ushort wBoughtModelIndex)
         {
             m_dwPaymentOfBoughtTaggerModel = dwPayment;
@@ -444,7 +444,7 @@ namespace GameNet
                         break;
                     }
 
-                    //mChen add
+                    //WQ add
                 case Type.MISSION_INDIVIDUAL_ADDDEL_SPREADER:
                     {
                         //变量定义
@@ -756,7 +756,7 @@ namespace GameNet
                         break;
                     }
 
-                    //mChen add, for HideSeek
+                    // for HideSeek
                 case Type.MISSION_INDIVIDUAL_BOUGHT_TAGGER_MODEL:
                     {
                         CMD_GP_BoughtTaggerModel kNetInfo = new CMD_GP_BoughtTaggerModel();
@@ -840,7 +840,7 @@ namespace GameNet
                 //设置推荐人结果
                 case MsgDefine.SUB_GP_SPREADER_RESOULT: return onSubSpreaderResoult(data, dataSize);
 
-                //mChen add:查询代理人列表结果
+                //WQ add:查询代理人列表结果
                 case MsgDefine.SUB_GP_SPREADERS_INFO_RESOULT: return onSubSpreadersInfoResoult(data, dataSize);
 
                 case MsgDefine.SUB_GP_TOP_PLAYERS_INFO_RESOULT: return onSubTopPlayersInfoResoult(data, dataSize);
@@ -860,7 +860,7 @@ namespace GameNet
                 //操作失败
                 case MsgDefine.SUB_GP_OPERATE_FAILURE: return onSubOperateFailure(data, dataSize);
 
-                //mChen add, for HideSeek
+                // for HideSeek
                 case MsgDefine.SUB_GP_BOUGHT_TAGGER_MODEL_RESULT: return onSubBoughtTaggerModelResoult(data, dataSize);
 
                 //商品购买反馈  WQ
@@ -1117,7 +1117,7 @@ namespace GameNet
         }
 
 
-        //mChen add
+        //WQ add
         //查询代理人列表结果
         bool onSubSpreadersInfoResoult(byte[] data, int size)
         {
@@ -1192,7 +1192,7 @@ namespace GameNet
         }
 
 
-        //mChen add, for HideSeek
+        // for HideSeek
         bool onSubBoughtTaggerModelResoult(byte[] data, int size)
         {
             //变量定义
@@ -1241,7 +1241,7 @@ namespace GameNet
         }
 
 
-        //mChen add
+        //WQ add
         //企业提现
         bool onSubAddEnterprisePaymentResult(byte[] data, int size)
         {
@@ -1779,7 +1779,7 @@ namespace GameNet
         ///string m_kSpreaderID;
         Tip m_tip;
 
-        //mChen add
+        //WQ add
         //增加/删除推荐人身份
         string m_szSpreaderRealName;
         string m_szSpreaderIDCardNo;
@@ -1808,14 +1808,14 @@ namespace GameNet
 //////////////////////////////////////////////////////////////////////////
         tagModifyIndividual mModifyIndividual;
 
-        //mChen add
+        //WQ add
         //内购
         uint m_dwPayment;         //购买金额（元）
         uint m_dwBoughtDiamond;     //购买到的钻石数
         //企业提现
         uint m_dwEnterprisePayment;
 
-        //mChen add, for HideSeek
+        // for HideSeek
         uint m_dwPaymentOfBoughtTaggerModel;
         byte m_cbPaymentTypeOfBoughtTaggerModel;
         ushort m_wBoughtModelIndex;

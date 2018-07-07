@@ -41,7 +41,7 @@ namespace GameNet
         protected uint m_dwSendPacketCount;               //发送计数
         protected uint m_dwRecvPacketCount;               //接受计数
 
-        //mChen add, for HideSeek
+        // for HideSeek
         private byte[] m_cbRecDataBuffer;
 
         /** 销毁 */
@@ -80,7 +80,7 @@ namespace GameNet
             // add by lesten
             temp_size_ = 0;
 
-            //mChen add, for HideSeek
+            // for HideSeek
             m_cbRecDataBuffer = new byte[Packet.SOCKET_TCP_BUFFER];
         }
         ~CSocketEngine()
@@ -345,7 +345,7 @@ namespace GameNet
                             Debug.Log("REV- --main command---- " + Command.wMainCmdID + " -- Sub Command -------" + Command.wSubCmdID);
                         }
 
-                        //mChen add, for HideSeek: fix客户端7s断线检测经常误报
+                        // for HideSeek: fix客户端7s断线检测经常误报
                         if (CServerItem.get()!=null && CServerItem.get().GetServerItemSocketEngine() == this)
                         {
                             //是CServerItem连接
@@ -385,7 +385,7 @@ namespace GameNet
                     }
                 }
 
-                //mChen add, for HideSeek
+                // for HideSeek
                 //Log
                 if(nRecvSize!=0)
                 {

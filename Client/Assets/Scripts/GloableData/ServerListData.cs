@@ -11,7 +11,7 @@ using CGameListItemArray = System.Collections.Generic.List<GameNet.CGameListItem
 using CGameTypeItemMap = System.Collections.Generic.Dictionary<ushort,GameNet.CGameTypeItem>;
 using CGameKindItemMap = System.Collections.Generic.Dictionary<ushort, GameNet.CGameKindItem>;
 using CGameServerItemMap = System.Collections.Generic.Dictionary<ushort, GameNet.CGameServerItem>;
-using CGameLobbyItemMap = System.Collections.Generic.Dictionary<ushort, GameNet.tagGameLobby>;//mChen add. for HideSeek
+using CGameLobbyItemMap = System.Collections.Generic.Dictionary<ushort, GameNet.tagGameLobby>;//WQ add. for HideSeek
 //typedef std::map<ushort, CGameTypeItem* > CGameTypeItemMap;
 //typedef std::map<ushort, CGameKindItem* > CGameKindItemMap;
 //typedef std::map<ushort, CGameServerItem* > CGameServerItemMap;
@@ -286,7 +286,7 @@ namespace GameNet
         protected CGameKindItemMap m_GameKindItemMap; //类型索引
         protected CGameServerItemMap m_GameServerItemMap; //房间索引
 
-        //mChen add, for HideSeek
+        // for HideSeek
         protected CGameLobbyItemMap m_GameLobbyItemMap; //大厅索引
 
         //内核变量
@@ -303,7 +303,7 @@ namespace GameNet
             m_GameServerItemMap = new CGameServerItemMap();
             m_GameListItemWait = new CGameListItemArray();
 
-            //mChen add. for HideSeek
+            //WQ add. for HideSeek
             m_GameLobbyItemMap = new CGameLobbyItemMap();
 
             //接口变量
@@ -337,7 +337,7 @@ namespace GameNet
             return pMinPlayerCoutServer;
         }
 
-        public static CGameServerItem getGameServerByKindAndServerType(ushort wKindID, ushort wServerType) //mChen add
+        public static CGameServerItem getGameServerByKindAndServerType(ushort wKindID, ushort wServerType) //WQ add
         {
             CGameServerItem pMinPlayerCoutServer = null;
             CServerListData pListData = GameNet.CServerListData.shared();
@@ -568,7 +568,7 @@ namespace GameNet
             return true;
         }
 
-        //mChen add. for HideSeek
+        //WQ add. for HideSeek
         //插入大厅
         public bool InsertGameLobby(tagGameLobby sGameLobby)
         {

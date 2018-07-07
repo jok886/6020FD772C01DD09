@@ -508,7 +508,7 @@ namespace GameNet
         //初始化房间
         public bool ConnectServer(CGameServerItem pGameServerItem, ushort wAVServerPort, uint dwAVServerAddr)
         {
-            //mChen add, temp hack: fix比赛时间未到参加导致的mServiceStatus==ServiceStatus_Entering，从而引起之后任何模式登陆都报System_Tips_1
+            // temp hack: fix比赛时间未到参加导致的mServiceStatus==ServiceStatus_Entering，从而引起之后任何模式登陆都报System_Tips_1
             if (true)//if (pGameServerItem.m_GameServer.wServerType == GAME_GENRE_MATCH) 
             {
                 IntermitConnect(true);
@@ -1336,7 +1336,7 @@ namespace GameNet
             //加入处理
             if ((wNowTableID == SocketDefines.INVALID_TABLE) && ((wNowTableID != wLastTableID) || (wNowChairID != wLastChairID)))
             {
-                //mChen add, temp hack: fix 比赛模式一局结束后，因为服务端的standup行为导致客户端退出到大厅 
+                // temp hack: fix 比赛模式一局结束后，因为服务端的standup行为导致客户端退出到大厅 
                 //但会产生一个私人（其他）模式的bug：解散房间后，客户端没有退回到大厅
                 ///return;
                 if (GetServerAttribute().wServerType == SocketDefines.GAME_GENRE_MATCH)
@@ -1807,12 +1807,12 @@ namespace GameNet
             //CRecvPacketHelper RecvPacket(pUserInfoHead + 1, dataSize - sizeof(tagUserInfoHead));
             CRecvPacketHelper RecvPacket = new CRecvPacketHelper(PacketBuffer, (ushort)PacketBuffer.Length);
 
-            //mChen add
+            //WQ add
             kUserInfo.dwClientAddr = pUserInfoHead.dwClientAddr;            //最后登录ip
             kUserInfo.dwPlayCount = pUserInfoHead.dwPlayCount;
             kUserInfo.RegisterDate = pUserInfoHead.RegisterDate;
 
-            //mChen add, for HideSeek WangHu
+            // for HideSeek WangHu
             kUserInfo.cbTeamType = pUserInfoHead.cbTeamType;
             kUserInfo.cbModelIndex = pUserInfoHead.cbModelIndex;
             ///kUserInfo.cbMapIndexRand = pUserInfoHead.cbMapIndexRand;
@@ -1867,7 +1867,7 @@ namespace GameNet
                             break;
                         }
 
-                    //mChen add, for headPic
+                    // for headPic
                     case GameServerDefines.DTP_GR_HEAD_HTTP:  //微信头像
                         {
                             //ASSERT(pDataBuffer != NULL);
@@ -1958,7 +1958,7 @@ namespace GameNet
             return true;
         }
         //用户聊天
-        bool OnSocketSubUserChatIndex(byte[] data, int dataSize) //mChen add
+        bool OnSocketSubUserChatIndex(byte[] data, int dataSize) //WQ add
         {
             if (mIClientKernelSink != null)
             {
@@ -1975,7 +1975,7 @@ namespace GameNet
 
         }
         //用户表情
-        bool OnSocketSubUserExpressionIndex(byte[] data, int dataSize) //mChen add
+        bool OnSocketSubUserExpressionIndex(byte[] data, int dataSize) //WQ add
         {
             if (mIClientKernelSink != null)
             {
@@ -2030,7 +2030,7 @@ namespace GameNet
             return true;
         }
 
-        //mChen add, for HideSeek
+        // for HideSeek
         bool OnSocketSubInventoryCreate(byte[] data, int dataSize)
         {
             //生成道具
@@ -2128,7 +2128,7 @@ namespace GameNet
                     mIStringMessageSink.InsertSystemString(pSystemMessage.szString);
                 }
 
-                //mChen add, for HideSeek
+                // for HideSeek
                 Debug.LogWarning("OnSocketSubSystemMessage: SMT_CLOSE_LINK: LeaveGameToHall");
                 Loom.QueueOnMainThread(() =>
                 {
@@ -2165,7 +2165,7 @@ namespace GameNet
                     mIStringMessageSink.InsertSystemString(pSystemMessage.szString);
                 }
 
-                //mChen add, for HideSeek: fix继续游戏报钻石不够创建房间:强制用户离开
+                // for HideSeek: fix继续游戏报钻石不够创建房间:强制用户离开
                 Debug.LogWarning("OnSocketSubSystemMessage: SMT_CLOSE_GAME: LeaveGameToHall");
                 Loom.QueueOnMainThread(() =>
                 {
@@ -2203,7 +2203,7 @@ namespace GameNet
                     mIStringMessageSink.InsertSystemString(pSystemMessage.szString);
                 }
 
-                //mChen add, for HideSeek: fix“您的帐号在另一地方进入了此游戏房间，您被迫离开”导致的一个人进两个房间:强制用户离开 
+                // for HideSeek: fix“您的帐号在另一地方进入了此游戏房间，您被迫离开”导致的一个人进两个房间:强制用户离开 
                 Debug.LogWarning("OnSocketSubSystemMessage: SMT_CLOSE_ROOM: LeaveGameToHall");
                 Loom.QueueOnMainThread(() =>
                 {
@@ -2289,7 +2289,7 @@ namespace GameNet
                 //Debug.Log("CServerItem.MDM_GF_FRAME" + sub);
                 switch (sub)
                 {
-                    //mChen add
+                    //WQ add
                     case GameServerDefines.SUB_GF_USER_CHAT_INDEX:            //用户聊天
                         {
                             return OnSocketSubUserChatIndex(data, dataSize);
@@ -2299,7 +2299,7 @@ namespace GameNet
                             return OnSocketSubUserExpressionIndex(data, dataSize);
                         }
 
-                    //mChen add, for HideSeek
+                    // for HideSeek
                     case GameServerDefines.SUB_GF_INVENTORY_CREATE:
                         {
                             return OnSocketSubInventoryCreate(data, dataSize);
@@ -2508,7 +2508,7 @@ namespace GameNet
                 {
                     mIServerMatchSink.OnSocketSubMatchFee(pNetInfo);
                 }
-                //mChen add
+                //WQ add
                 else
                 {
                     if (mIStringMessageSink != null)
@@ -2716,7 +2716,7 @@ namespace GameNet
             //CMD_GF_Private_End_Info kNetInfo = new CMD_GF_Private_End_Info();
             //kNetInfo.StreamValue(data, false,dataSize);
 
-            //mChen add, for HideSeek
+            // for HideSeek
             GlobalUserInfo pGlobalUserInfo = GlobalUserInfo.GetInstance();
             tagGlobalUserData pGlobalUserData = pGlobalUserInfo.GetGlobalUserData();
             pGlobalUserData.cbMapIndexRand = kNetInfo.cbMapIndex;

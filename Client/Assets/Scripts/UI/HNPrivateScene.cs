@@ -48,7 +48,7 @@ namespace GameNet
                 {
                     CMD_GR_Join_Private kSendNet;
                     kSendNet.dwRoomNum = (uint)m_iJoinRoomId;//utility::parseInt(m_kJoinNumTxt); // lin Temp do this
-                    kSendNet.cbGameTypeIdex = m_cbGameTypeIdex;//mChen add
+                    kSendNet.cbGameTypeIdex = m_cbGameTypeIdex;//WQ add
                     kSendNet.cbChoosedModelIndex = (byte)PlayerPrefs.GetInt("ChoosedModelIndex");
 
                     Debug.Log("OnSocketSubPrivateInfo Type_Link_Join: m_cbGameTypeIdex=" + m_cbGameTypeIdex);
@@ -88,7 +88,7 @@ namespace GameNet
                 GameManagerBaseNet.InstanceBase().connectGameServerByServerID(iServerId);
                 m_eLinkAction = Type_LinkAction.Type_Link_Join;
 
-                m_cbGameTypeIdex = HNGameManager.GameType;//mChen add
+                m_cbGameTypeIdex = HNGameManager.GameType;//WQ add
 
                 Debug.Log("Button_JoinRoom: m_cbGameTypeIdex=" + m_cbGameTypeIdex);
             }
@@ -203,7 +203,7 @@ namespace GameNet
             m_eLinkAction = Type_LinkAction.Type_Link_Create;
         }
 
-        public void ConnectAndCreatePrivateByKindIDAndServerType(int iKindID, ushort wServerType,  CMD_GR_Create_Private kNet)//mChen add
+        public void ConnectAndCreatePrivateByKindIDAndServerType(int iKindID, ushort wServerType,  CMD_GR_Create_Private kNet)//WQ add
         {
             GameManagerBaseNet.InstanceBase().connectGameServerByKindIDAndServerType((ushort)iKindID, wServerType);
             //memcpy(&m_kCreatePrivateNet, &kNet, sizeof(kNet));
@@ -235,7 +235,7 @@ namespace GameNet
         protected CMD_GR_Create_Private m_kCreatePrivateNet;
         protected Type_LinkAction m_eLinkAction;
 
-        //mChen add
+        //WQ add
         protected byte m_cbGameTypeIdex;
     };
 }

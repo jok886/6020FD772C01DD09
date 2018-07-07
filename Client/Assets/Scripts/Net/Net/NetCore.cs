@@ -62,7 +62,7 @@ namespace GameNet
 #if !UNITY_EDITOR && UNITY_IPHONE
 			//url = IOSIpv6.GetIPv6Str(url, port, out family);
 
-            //mChen add, for ipv6 support
+            // for ipv6 support
             IPAddress[] address = Dns.GetHostAddresses("www.baidu.com");
             //IPAddress[] address = Dns.GetHostAddresses("127.0.0.1");  
             //foreach (var info in address)
@@ -124,7 +124,7 @@ namespace GameNet
             }
             isConnected = false;
 
-            //mChen add, temp
+            // temp
             ///DisconnectCallback();
         }
         /*
@@ -174,7 +174,7 @@ namespace GameNet
                     //Connect();
                 }
             }
-            ////mChen add
+            ////WQ add
             //catch (ObjectDisposedException e)
             //{
             //    Debug.LogError("send catch ObjectDisposedException:" + e);
@@ -386,7 +386,7 @@ namespace GameNet
 
                 closeSocket();
 
-                //mChen add, for HideSeek 断线重连：设置serviceStatus使CheckInGameServerAfterOffline中的自动重连生效，因为客户端的7s断线检测关了（StartOrStopGameSceneHeartBeat直接return）
+                // for HideSeek 断线重连：设置serviceStatus使CheckInGameServerAfterOffline中的自动重连生效，因为客户端的7s断线检测关了（StartOrStopGameSceneHeartBeat直接return）
                 ///DisconnectCallback();
 
                 return;
@@ -431,7 +431,7 @@ namespace GameNet
 
                     DisconnectCallback();
 #else
-                    //mChen add, for HideSeek
+                    // for HideSeek
                     Array.Clear(state.buffer, 0, StateObject.BufferSize);
                     if (isConnected)
                     {

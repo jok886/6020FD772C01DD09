@@ -155,7 +155,7 @@ void OnGRLogonSuccess(byte[] data, int dataSize) ;
         //用户数
         // uint GetActiveUserCount() ;
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         PlayerTeam.PlayerTeamType GetTeamType();
         byte GetModelIndex();
 
@@ -407,7 +407,7 @@ void OnGRLogonSuccess(byte[] data, int dataSize) ;
             return m_UserInfo.cbUserStatus;
         }
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         public PlayerTeam.PlayerTeamType GetTeamType()
         {
             PlayerTeam.PlayerTeamType teamType = (PlayerTeam.PlayerTeamType)m_UserInfo.cbTeamType;

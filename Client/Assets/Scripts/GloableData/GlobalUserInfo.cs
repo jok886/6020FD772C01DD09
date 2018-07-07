@@ -24,7 +24,7 @@ namespace GameNet
 
             iSpreaderLevel = -1;
 
-            //mChen add, for HideSeek WangHu
+            // for HideSeek WangHu
             cbMapIndexRand = 100;
             cbMapIndexRandForSingleGame = 100;
             wRandseed = 128;
@@ -55,27 +55,27 @@ namespace GameNet
         public long lUserIngot;                           //用户元宝
         public double dUserBeans;                          //用户游戏豆
 
-        //mChen add, for签到
+        // for签到
         public ushort wSeriesDate;
         public bool bTodayChecked;
 
-        //mChen add, for抽奖
+        // for抽奖
         public uint dwPlayCount;//已打场次
         public uint dwRaffleCount;//已抽奖次数
         public uint dwPlayCountPerRaffle;
 
-        //mChen add, 代理
+        // 代理
         public int iSpreaderLevel;  //代理等级： -1:不是代理人
 
-        //mChen add, for HideSeek:查询警察模型库
+        // for HideSeek:查询警察模型库
         public long lModelIndex0;
 
         public bool bGPIsForAppleReview;
 
-        //mChen add,公告信息
+        //WQ add,公告信息
         public byte[] szPublicNotice;
 
-        //mChen add, for HideSeek WangHu
+        // for HideSeek WangHu
         public byte cbMapIndexRand;
         public byte cbMapIndexRandForSingleGame;
         //for随机种子同步
@@ -156,7 +156,7 @@ namespace GameNet
     // 	byte							cbInsureEnabled;					//银行使能条件
     // };
 
-    //mChen add
+    //WQ add
     //代理人列表
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
     public class tagSpreadersInfo
@@ -224,7 +224,7 @@ namespace GameNet
 
         protected tagGrowLevelParameter m_GrowLevelParameter;                 //用户等级信息
 
-        //mChen add
+        //WQ add
         //查询代理人列表
         tagSpreadersInfo m_SpreadersInfo;                       //代理人列表
         public const int Max_Spreaders_Num_PerSend = 400;       //服务器每次发送的最大代理人个数  
@@ -258,7 +258,7 @@ namespace GameNet
 
         //功能函数
 
-        //mChen add
+        //WQ add
         public tagSpreadersInfo GetSpreadersInfo() { return m_SpreadersInfo; }
         public tagChildrenPaymentInfo GetChildrenPaymentInfo() { return m_ChildrenPaymentInfo; }
         //lin add

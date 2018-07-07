@@ -89,7 +89,8 @@ public class Store : MonoBehaviour
     {
         GameObject StoreObj = m_Canvas.transform.Find("Window/StoreWindow").gameObject;
         GameObject Content = StoreObj.transform.Find("RechargeView/Viewport/Content").gameObject;
-        Content.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 300 * (float)Math.Ceiling((double)HNGameManager.listTagger.Count / row));
+        Content.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 300 * (float)Math.Ceiling((double)
+            HNGameManager.listTagger.Count / row));
         for (int i = 0; i < HNGameManager.listTagger.Count; i++)
         {
             GameObject loadObj = Resources.Load("UI/Store/Prefabs/Purchase0") as GameObject;

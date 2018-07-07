@@ -119,7 +119,7 @@ namespace GameNet
             return GlobalUserInfo.getGender();
         }
 
-        //mChen add
+        //WQ add
         public void modifyIndivHeadHttp(float fWaiteTime)
         {
             if (fWaiteTime > 0.01f)
@@ -191,7 +191,7 @@ namespace GameNet
             m_kIndividualMission.modifySpreader(dwSpreaderID);
         }
 
-        // mChen add
+        // WQ add
         //增加/删除推荐人身份
         public void addDelSpreader(uint dwSpreaderID, string szSpreaderRealName, string szSpreaderTelNum, string szSpreaderWeiXinAccount, uint dwParentSpreaderID, ushort wSpreaderLevel, bool bIsAddSpreader)
         {
@@ -203,7 +203,7 @@ namespace GameNet
             m_kIndividualMission.querySpreadersInfo(cSurrogate);
         }
 
-        //mChen add
+        //WQ add
         //游戏内购
         public void AddPayment(uint dwPayment, uint dwBoughtDiamond)
         {
@@ -220,7 +220,7 @@ namespace GameNet
             m_kIndividualMission.AddEnterprisePay(dwPayment);
         }
 
-        //mChen add, for HideSeek
+        // for HideSeek
         public void BoughtTaggerModel(uint dwPayment, byte cbPaymentType, ushort wBoughtModelIndex)
         {
             m_kIndividualMission.BoughtTaggerModel(dwPayment, cbPaymentType, wBoughtModelIndex);
@@ -359,7 +359,7 @@ namespace GameNet
                 GameScene.KIND_ID = 0;
                 HNGameManager.GameType = HNPrivateScenceBase.GAME_TYPE_Null;
 
-                //mChen add, for HideSeek:强制离开
+                // for HideSeek:强制离开
                 //玩家没被锁在GameScoreLocker表中
                 Debug.LogError("onUserInGameServerID: 玩家没被锁在GameScoreLocker表中");
                 if (m_hnManager != null)
@@ -383,7 +383,7 @@ namespace GameNet
             }
         }
 
-        //mChen add
+        //WQ add
         /// <CGPSignInMission>
         ///    
         public void QuerySignIn()
@@ -417,7 +417,7 @@ namespace GameNet
         /// </IGPSignInMissionSink>
         /// 
 
-        //mChen add
+        //WQ add
         public void DoneRaffle(uint dwRaffleGold)
         {
             if (m_kRaffleMission != null)

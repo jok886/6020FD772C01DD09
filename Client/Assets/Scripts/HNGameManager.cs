@@ -63,7 +63,7 @@ public class HNGameManager : MonoBehaviour
     //ChatSystem
     public ChatSystem chatSystem;
 
-    //mChen add, for HideSeek
+    // for HideSeek
     public GameObject PlayerTeamObj;
     public GameObject CameraControl;
     public static object LockObjOfLoadScene { get; set; }
@@ -139,14 +139,14 @@ public class HNGameManager : MonoBehaviour
     public byte m_cbPlayCostTypeIdex = 1;   //支付方式：0-房主支付， 1-平均支付
     public byte m_PlayerCount = 4;
 
-    //mChen add, for Match Time
+    // for Match Time
     public systemtime m_matchStartTime;
     public systemtime m_matchEndTime;
 
     private float m_offlineWaitTime = 0;
     private GameObject m_breakLineWindow;
 
-    //mChen add, 解散房间倒计时
+    // 解散房间倒计时
     private Coroutine m_timeDownOfDismissRoom;
     public GameObject m_timeDownObjOfDismissRoom;
 
@@ -225,7 +225,7 @@ public class HNGameManager : MonoBehaviour
     //private Dictionary<int, int> m_PlayerIndex2PlayerUI = new Dictionary<int, int>(HNMJ_Defines.GAME_PLAYER);  
     public static int m_iLocalChairID = -1;
 
-    //mChen add
+    //WQ add
     public bool m_bIsToHallByDisconnect;
     private GameObject m_offlineWaitingImage;
     public bool m_bIsToHallFrom13Shui;
@@ -317,7 +317,7 @@ public class HNGameManager : MonoBehaviour
 
         Application.targetFrameRate = 30;
 
-        //mChen add, for HideSeek
+        // for HideSeek
         DontDestroyOnLoad(PlayerTeamObj);
         DontDestroyOnLoad(CameraControl);
         if (LockObjOfLoadScene == null)
@@ -727,7 +727,7 @@ public class HNGameManager : MonoBehaviour
             m_allPlayersUI[iChairId].CurHightLight = m_allPlayersUI[iChairId].SeatNode.transform.Find("HighEffect").gameObject;
             m_allPlayersUI[iChairId].Audio = m_allPlayersUI[iChairId].SeatNode.GetComponent<AudioSource>();
 
-            //mChen add, fix离线标志位置不对的bug
+            // fix离线标志位置不对的bug
             m_allPlayersUI[iChairId].m_breakBackObj = m_allPlayersUI[iChairId].SeatNode.transform.Find("User/BreakBack").gameObject;
             m_allPlayersUI[iChairId].m_playerReadyObj = m_allPlayersUI[iChairId].SeatNode.transform.Find("User/ReadyBack").gameObject;
             m_allPlayersUI[iChairId].m_huScoreObj = m_allPlayersUI[iChairId].SeatNode.transform.Find("User/HuScore").gameObject;
@@ -957,7 +957,7 @@ public class HNGameManager : MonoBehaviour
         }
     }
 
-    //mChen add, for解散房间倒计时
+    // for解散房间倒计时
     public void StartTimeDownOfDismissRoom()
     {
         if (m_timeDownObjOfDismissRoom == null)
@@ -1079,7 +1079,7 @@ public class HNGameManager : MonoBehaviour
         }
     }
 
-    //mChen add, for HideSeek
+    // for HideSeek
     public void LoadHideSeekSceneOfWangHu()
     {
         //Log
@@ -1370,11 +1370,11 @@ public class HNGameManager : MonoBehaviour
                     kernel.ExitGameBase();
                 }
 
-                //mChen add, for HideSeek
+                // for HideSeek
                 CServerItem.get().IntermitConnect(true);
             }
 
-            //mChen add, for HideSeek:强制离开,fix有人在团灭前断线，重连回来（已经下一局）点离开房间按钮没反应
+            // for HideSeek:强制离开,fix有人在团灭前断线，重连回来（已经下一局）点离开房间按钮没反应
             LeaveGameToHall();
         }
     }
@@ -1682,7 +1682,7 @@ public class HNGameManager : MonoBehaviour
 
     }
 
-    //mChen add, for HideSeek
+    // for HideSeek
     public void UpdateReadyButton()
     {
         if (GameManager.s_gameSingleMultiType != GameSingleMultiType.SingleGame && bEnteredGameScene && !m_bPressStartButton && CServerItem.get() != null)
@@ -1865,12 +1865,12 @@ public class HNGameManager : MonoBehaviour
         if (bEnteredGameScene && m_cbGameEndReason == HNMJ_Defines.GER_NOT_END /*&& m_bRoomStartGame*/ && serviceStatus != enServiceStatus.ServiceStatus_ServiceIng)//kernel==null
         {
             //mChen comment:因为服务器在游戏结束时会让离线玩家强制离开
-            ////mChen add, 游戏快结束的时候断线，直接回到大厅，fix重连回来已经第二轮的bug
+            //// 游戏快结束的时候断线，直接回到大厅，fix重连回来已经第二轮的bug
             //if ( (Gamestate == SocketDefines.GAME_STATUS_PLAY && UIManager.TimeLeft < 20) || (Gamestate == SocketDefines.GAME_STATUS_END) )
             //{
             //    Debug.Log("游戏快结束的时候断线，直接回到大厅,TimeLeft=" + UIManager.TimeLeft);
 
-            //    //mChen add, for HideSeek:强制离开
+            //    // for HideSeek:强制离开
             //    if (CServerItem.get() != null)
             //    {
             //        CServerItem.get().IntermitConnect(true);
@@ -1938,7 +1938,7 @@ public class HNGameManager : MonoBehaviour
                 }
                 if (pMeItem == null)
                 {
-                    //mChen add, for HideSeek:去除重连提示UI
+                    // for HideSeek:去除重连提示UI
                     if (m_breakLineWindow != null && m_breakLineWindow.activeSelf)
                     {
                         m_breakLineWindow.SetActive(false);
@@ -3372,7 +3372,7 @@ public class HNGameManager : MonoBehaviour
         Debug.Log("Record Reach end!");
     }
 
-    //mChen add, for HideSeek
+    // for HideSeek
     private Coroutine waitCoroutine = null;
     private Coroutine hideCoroutine = null;
     private Coroutine playCoroutine = null;
